@@ -79,7 +79,7 @@
 
 		<article id="concept">
 			<div class="content">
-				<img src="images/iphone.png" class="center" />
+				<img src="images/iphone.png" class="center" alt=""/>
 				<div class="center">
 					<p><?php echo CONCEPT_TEXTE_1; ?></p>
 					<p><?php echo CONCEPT_TEXTE_2; ?></p>
@@ -97,16 +97,16 @@
 				</div>
 				<div class="contact-left">
 					<ul>
-						<li>0670286180</li>
-						<li>OPUS<br>
+						<li><img src="images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
+						<li><img src="images/map.png" alt="logo telephone" /> OPUS<br>
 						5 rue Froment, 75011 Paris - FRANCE</li>
-						<li>unit.iesa@gmail.com</li>
+						<li><img src="images/mail.png" alt="logo telephone" /> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
 					</ul>
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="images/fb.png" /></a></li>
-						<li><a href=""><img src="images/tw.png" /></a></li>
-						<li><a href=""><img src="images/insta.png" /></a></li>
-						<li><a href=""><img src="images/yt.png" /></a></li>
+						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="images/tw.png" /></a></li>
+						<li><a href="" target="_BLANK"><img src="images/insta.png" /></a></li>
+						<li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li>
 					</ul>
 				</div>
 			</div>
@@ -120,12 +120,13 @@
 
 	<div class="overlay"></div>
 	<div class="modal">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button class="close">x</button>
+		<h1>Le présent site est édité par l'agence Unit :</h1>
+		<p>
+			Adresse : 5 rue Froment 75011 Paris, France<br/>
+			CEO : M. Antonin Cazin<br/>
+			Capital social : 100 €<br/>
+			L’hébergement du site est assuré par OVH, société par actions simplifiée dont le siège social est au 2 rue Kellermann, 59100 Roubaix et dont le numéro de téléphone est le 0820 698 765.</p>
 	</div>
 
 		

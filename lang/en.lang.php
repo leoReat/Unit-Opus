@@ -10,7 +10,12 @@
 	define("CONCEPT_TEXTE_1", "<strong>Opus</strong> allows you to buy a lithography during your visit to the museum, without having to pass through the museum boutique. ");
 	define("CONCEPT_TEXTE_2", "Scan the art piece while you’re admiring it and <strong>Opus</strong> delivers it directly to you.
 ");
-	define("CONCEPT_CTA", "Contact");
+	define("CONCEPT_CTA", "Download the app");
 	
-	define("CONTACT_TEXTE", "N’hésitez pas à nous contacter si vous avez une question à poser, une suggestion à apporter, un partenariat à proposer ou pour tout autre demande.");
+	define("CONTACT_TITRE", "Contact us.");
+	define("CONTACT_TEXTE", "Contact us for any question, suggestion, commercial partnership or any request");
+	define("CONTACT_CTA", "Live chat");
+
+	define("COPYRIGHT", "Copyright");
+	define("MENTIONS", "Terms and conditions");
 ?>

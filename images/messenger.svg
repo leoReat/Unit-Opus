@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="37px" viewBox="0 0 36 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Bubble_Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Welcome" transform="translate(-80.000000, -828.000000)" fill="#0084FF">
+            <g id="HEADER">
+                <path d="M97.9772198,828 C88.048676,828 80,835.535216 80,844.830434 C80,850.118225 82.6048539,854.836385 86.6786175,857.921861 L86.6786175,864.363156 L92.8136213,860.956089 C94.4491283,861.414478 96.1824346,861.660869 97.9772198,861.660869 C107.905764,861.660869 115.95444,854.125607 115.95444,844.830389 C115.95444,835.53517 107.905764,828 97.9772198,828 Z M99.870582,850.569286 L95.221047,845.733334 L86.2669276,850.691061 L96.0838577,840.26107 L100.733438,845.097022 L109.687512,840.139295 L99.870582,850.569286 Z" id="Bubble_Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

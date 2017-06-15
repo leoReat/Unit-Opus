@@ -1,0 +1,56 @@
+/* MOBILE */
+@media screen and (max-width: 800px) {
+	.no-mobile{
+		display:none;
+	}
+	
+	#presentation div.center,
+	#concept div.center,
+	div.center,
+	.center,
+	#contact .content.center,
+	#contact .content.center .contact-left{
+		width:100%;
+		position:static;
+		transform:none;
+	}
+
+	body{
+		padding-top:0;
+		text-align:center;
+	}
+	html, body, article, section, article{
+		height:auto;
+	}
+	.content,
+	#contact .content.center div.chat p{
+		width:100%;
+	}
+	header{
+		text-align:center;
+	}
+	header nav{
+		width:100%;
+		padding: 20px 0;
+	}
+	/*header nav ul, 
+	header nav ul.navigation li{
+		display:block;
+	}*/
+	header nav a img#logo,
+	#contact .content.center div.chat a{
+		position:static;
+		transform:none;
+	}
+
+	header nav ul.navigation li a,
+	header nav ul#flag li a,
+	header nav a img#logo{
+		padding:10px;
+	}
+
+	header{
+		top:auto;
+		bottom:0;
+	}
+}

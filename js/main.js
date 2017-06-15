@@ -42,11 +42,12 @@ $(document).scroll(function(){
 	var heightStrates = $(window).height() - navHeight - 2;
 	var index = Math.ceil($(window).scrollTop() / heightStrates) - 1;
 	if(index < 0) index = 0;
+	if($(window).scrollTop() + $(window).height() >= $(document).height()) index = 2;
 	$("header nav ul.navigation li").removeClass("active");
 	$("header nav ul.navigation li").eq(index).addClass("active");
 });
 
-$("footer p:nth-of-type(2) a, .overlay").click(function(e){
+$("footer p:nth-of-type(2) a, .overlay, button.close").click(function(e){
 	e.preventDefault();
 	$(".modal, .overlay").fadeToggle(300);
 	$("body").toggleClass("no-scroll");

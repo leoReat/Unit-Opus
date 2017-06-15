@@ -1,3 +1,8 @@
+<?php
+	$lang = "fr";
+	if(isset($_GET["lang"]) && $_GET["lang"] == "en") $lang = "en";
+	require_once("lang/".$lang.".lang.php");
+?>
 <!doctype html>
 <head>
 	<title>OPUS - Digitalisez votre musée</title>
@@ -8,7 +13,7 @@
 	<meta name="description" content="Opus est une solution innovante de digitalisation des musées et galeries." />
 	<meta name="title" content="Opus - Digitalisez votre musée">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="icon" type="image/png" href="/images/favicon.png" />
 
 	<!-- Hotjar Tracking Code for http://get-opus.fr/ -->
 	<script>
@@ -28,15 +33,15 @@
 <body>
 	<header>
 		<nav>
-			<a href=""><img src="images/logo.png" alt="Logo Opus" id="logo" /></a>
+			<a href="#presentation" class="home"><img src="images/logo.png" alt="Logo Opus" id="logo" /></a>
 			<ul class="navigation">
-				<li class="active"><a href="#presentation">Accueil</a></li>
-				<li><a href="#concept">Concept</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li class="active"><a href="#presentation"><?php echo ACCUEIL; ?></a></li>
+				<li><a href="#concept"><?php echo CONCEPT; ?></a></li>
+				<li><a href="#contact"><?php echo CONTACT; ?></a></li>
 			</ul>
 			<ul id="flag">
-				<li><a href=""><img src="images/francais.png" alt="français"/></a></li>
-				<li><a href=""><img src="images/english.png" alt="english"/></a></li>
+				<li><a href="/fr"><img src="images/francais.png" alt="français"/></a></li>
+				<li><a href="/en"><img src="images/english.png" alt="english"/></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -45,9 +50,9 @@
 			<div class="content">
 				<img src="images/sculpture.png" class="center" />
 				<div class="center">
-					<h1>Aimez, scannez, recevez.</h1>
-					<p><strong>Opus</strong>, l'application qui achemine vos oeuvres d'art préférées jusqu'à chez vous !</p>
-					<a href="#concept">En savoir plus</a>
+					<h1><?php echo PRESENTATION_TITRE; ?></h1>
+					<p><?php echo PRESENTATION_TEXTE; ?></p>
+					<a href="#concept"><?php echo PRESENTATION_CTA; ?></a>
 				</div>
 			</div>
 		</article>
@@ -56,9 +61,9 @@
 			<div class="content">
 				<img src="images/iphone.png" class="center" />
 				<div class="center">
-					<p><strong>Opus</strong> vous permet, au cours d’une visite de musée ou galerie d’art, d’acheter la litographie d’une oeuvre que vous appréciez, sans passer par la boutique physique.</p>
-					<p>En un seul geste <strong>Opus</strong> reconnaît l’oeuvre devant laquelle vous vous trouvez et la livre directement chez vous.</p>
-					<a href="#contact">Contact</a>
+					<p><?php echo CONCEPT_TEXTE_1; ?></p>
+					<p><?php echo CONCEPT_TEXTE_2; ?></p>
+					<a href="#contact"><?php echo CONCEPT_CTA ?></a>
 				</div>
 			</div>
 		</article>
@@ -66,8 +71,7 @@
 		<article id="contact">
 			<div class="content">
 				<div class="center">
-					<p>N’hésitez pas à nous contacter si vous avez une question à poser, une suggestion à apporter, un partenariat à proposer ou pour tout autre demande.</p>
-					<a href="">Contact</a>
+					<p><?php echo CONTACT_TEXTE; ?></p>
 				</div>
 				<form>
 					<input type="text" name="" />
@@ -123,17 +127,15 @@
 		});
 
 		
-		$("header nav ul.navigation li a, div.center a").click(function(e){
+		$("header nav .home, header nav ul.navigation li a, div.center a").click(function(e){
 			e.preventDefault();
 			var strate = $(this).attr("href");
-			console.log(this, strate)
 		 	if(strate) $('html, body').animate({scrollTop:$(strate).offset().top - 91}, 'slow');
 		});
 
 		$(document).scroll(function(){
 			var navHeight = $("header").height()
 			var heightStrates = $(window).height() - navHeight - 2;
-			console.log($(window).scrollTop() / heightStrates)
 			var index = Math.ceil($(window).scrollTop() / heightStrates) - 1;
 			if(index < 0) index = 0;
 			$("header nav ul.navigation li").removeClass("active");

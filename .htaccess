@@ -1,0 +1,16 @@
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+# Empêcher les boucles infinies
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule ^ - [L]
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# En remplace /en ou /fr par index.php?lang=en
+RewriteRule /?(en|fr)$ index.php?lang=$1 [L]

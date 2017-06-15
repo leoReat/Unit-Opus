@@ -7,13 +7,16 @@
 <head>
 	<title>OPUS - Digitalisez votre musée</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="mdeias.css" type="text/css" />
 	<script src="js/jquery.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Opus, musée, digital">
 	<meta name="description" content="Opus est une solution innovante de digitalisation des musées et galeries." />
 	<meta name="title" content="Opus - Digitalisez votre musée">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" type="image/png" href="/images/favicon.png" />
+
+
 
 	<!-- Hotjar Tracking Code for http://get-opus.fr/ -->
 	<script>

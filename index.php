@@ -140,10 +140,7 @@
 
 	<button class="scroll-top" href="#presentation"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>
 
-		
-	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-	<script src="js/main.js"></script>
-
+	
     <!-- COOKIES -->
 
     <script src="js/cookiechoices.js"></script>
@@ -152,5 +149,9 @@
                 'En poursuivant votre navigation, vous acceptez l \ ’utilisation des cookies.', 'J \ ’accepte', 'En savoir plus',
                 'http://www.get-opus.fr/mentions-legales/');});
     </script>
+		
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<script src="js/main.js"></script>
+
 </body>
 </html>

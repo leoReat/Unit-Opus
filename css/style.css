@@ -147,7 +147,15 @@ div.center a.button, button.button{
 	letter-spacing:1px;
 	font-size:19px;
 	margin-top:25px;
-	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.37)
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.37);
+	transition:all ease 0.3s;
+}
+div.center a.button:hover, button.button:hover{
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+}
+div.center a.button:active, button.button:active,
+div.center a.button:focus, button.button:focus{
+	box-shadow:none;
 }
 #concept{
 	background:#fdfcfc;
@@ -277,7 +285,7 @@ footer p a{
     transform: translate(-50%, -50%);
     background: #fff;
     padding: 30px;
-    z-index:4;
+    z-index:9999;
     display:none;
     width:60%;
     max-width:960px;
@@ -294,7 +302,7 @@ body.no-scroll{
     height: 100%;
     background: #000;
     opacity:0.4;
-    z-index: 3;
+    z-index: 9000;
     display:none;
 }
 .modal h1{
@@ -365,4 +373,8 @@ form button{
 }
 .scroll-top img{
 	width:100%;
+}
+
+#cookieChoiceInfo span{
+	display:block;
 }

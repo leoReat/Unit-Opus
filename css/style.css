@@ -100,9 +100,60 @@ section article{
 	background:url(../images/background.jpg) no-repeat;
 	background-size:cover;
 }
-#presentation img{
+
+#presentation .images{
 	max-width:350px;
 	width: 30%;
+	position: absolute;
+	top:50%;
+	transform:translateY(-50%);
+}
+#presentation .images:hover #bdroit{
+	bottom: 12px;
+	right: 12px;
+}
+#presentation .images:hover #bgauche{
+	bottom: 12px;
+	left: 12px;
+}
+#presentation .images:hover #hdroit{
+	top: 12px;
+	right: 12px;
+}
+#presentation .images:hover #hgauche{
+	top: 12px;
+	left: 12px;
+}
+#presentation img:first-of-type,
+#stone2{
+	width: 100%;
+}
+#hdroit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: all ease 0.3s;
+}
+#hgauche{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(-90deg);
+	transition: all ease 0.3s;
+}
+#bdroit{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: rotate(90deg);
+	transition: all ease 0.3s;
+}
+#bgauche{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: rotate(180deg);
+	transition: all ease 0.3s;
 }
 .center{
 	animation:fade ease 2s;

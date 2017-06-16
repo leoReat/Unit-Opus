@@ -31,7 +31,7 @@ $.getJSON('//freegeoip.net/json/?callback=?', function(infos) {
 });
 
 
-$("header nav .home, header nav ul.navigation li a, div.center a.scroll").click(function(e){
+$("header nav .home, header nav ul.navigation li a, div.center a.scroll, .scroll-top").click(function(e){
 	e.preventDefault();
 	var strate = $(this).attr("href");
 
@@ -50,12 +50,17 @@ $(document).scroll(function(){
 	var index = 0;
 	if($(window).scrollTop() > ($("#concept").offset().top - navHeight)){
 		index = 1;
+		if($(window).width() > 799) $(".scroll-top").fadeIn();
 	}	
-	else if($(window).scrollTop() > ($("#contact").offset().top - navHeight)
+	else if($(window).width() > 799) $(".scroll-top").fadeOut();
+
+	if($(window).scrollTop() > ($("#contact").offset().top - navHeight)
 		|| ($(window).scrollTop() + $(window).height()) >= $(document).height()) index = 2;
 
-	var parallax = ($(window).scrollTop() - $("#concept").offset().top) / 7;
-	$("#concept img.center").css("margin-top", - parallax )
+	if($(window).width() > 799){
+		var parallax = ($(window).scrollTop() - $("#concept").offset().top) / 7;
+		$("#concept img.center").css("margin-top", - parallax )
+	}
 
 
 	$("header nav ul.navigation li").removeClass("active");

@@ -142,7 +142,7 @@
 			L’hébergement du site est assuré par OVH, société par actions simplifiée dont le siège social est au 2 rue Kellermann, 59100 Roubaix et dont le numéro de téléphone est le 0820 698 765.</p>
 	</div>
 
-	<button class="scroll-top"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>
+	<button class="scroll-top" href="#presentation"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>
 
 		
 	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>

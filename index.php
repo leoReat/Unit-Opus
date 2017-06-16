@@ -145,9 +145,14 @@
 
     <script src="js/cookiechoices.js"></script>
     <script>document.addEventListener('DOMContentLoaded',
-            function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. ' +
-                'En poursuivant votre navigation, vous acceptez l \ ’utilisation des cookies.', 'J \ ’accepte', 'En savoir plus',
-                'http://www.get-opus.fr/mentions-legales/');});
+            function(event){
+        cookieChoices.showCookieConsentBar('<?php echo  COOKIES; ?>', '<?php echo COOKIES_AGREE; ?>', '<?php echo COOKIES_LEARN; ?>', "http://test.fr");
+                $("footer p:nth-of-type(2) a, .overlay, button.close, #cookieChoiceInfo a:nth-of-type(1)").click(function(e){
+                    e.preventDefault();
+                    $(".modal, .overlay").fadeToggle(300);
+                    $("body").toggleClass("no-scroll");
+                });
+    });
     </script>
 		
 	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>

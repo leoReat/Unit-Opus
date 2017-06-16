@@ -134,12 +134,8 @@
 	<div class="overlay"></div>
 	<div class="modal">
 		<button class="close">x</button>
-		<h1>Le présent site est édité par l'agence Unit :</h1>
-		<p>
-			Adresse : 5 rue Froment 75011 Paris, France<br/>
-			CEO : M. Antonin Cazin<br/>
-			Capital social : 100 €<br/>
-			L’hébergement du site est assuré par OVH, société par actions simplifiée dont le siège social est au 2 rue Kellermann, 59100 Roubaix et dont le numéro de téléphone est le 0820 698 765.</p>
+		<h1><?php echo MENTIONS_TITRE; ?></h1>
+		<p><?php echo MENTIONS_TEXTE; ?></p>
 	</div>
 
 	<button class="scroll-top" href="#presentation"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>

@@ -18,4 +18,9 @@
 
 	define("COPYRIGHT", "Copyright");
 	define("MENTIONS", "Terms and conditions");
+	define("MENTIONS_TITRE", "The website is created by the agency Unit :");
+	define("MENTIONS_TEXTE", "Adress : Froment Street, 5, 75011 Paris, France. <br/>
+		CEO : Antonin Cazin<br/>
+		Capital : 100€<br/>
+		The website is hosted by OVH, joint stock company. Head office stands at Kellerman Street, 2, 59100 Roubaix, FRANCE. Phone number : +33820 698 765");
 ?>

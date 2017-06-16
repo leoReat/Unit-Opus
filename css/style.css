@@ -69,6 +69,9 @@ header nav ul li a{
 	letter-spacing:1px;
 	font-size:15px;
 }
+header nav ul li a:hover{
+	color:#000;
+}
 header nav ul.navigation li a{
 	padding:38px;
 }
@@ -101,10 +104,18 @@ section article{
 	max-width:350px;
 	width: 30%;
 }
+.center{
+	animation:fade ease 2s;
+}
 div.center{
 	left: 55%;
     width: 35%;
 }
+@keyframes fade{
+	0%{opacity:0;}
+	100%{opacity:1}
+}
+
 .center{
 	position:absolute;
 	top:50%;

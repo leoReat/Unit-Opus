@@ -72,7 +72,13 @@
 	<section>
 		<article id="presentation">
 			<div class="content">
-				<img src="images/sculpture.png" class="center" />
+                <div class="images" >
+                <img id="stone2" src="images/sculpture2.png"  />
+                <img id="hdroit" src="images/contour.png" />
+                <img id="hgauche" src="images/contour.png" />
+                <img id="bdroit" src="images/contour.png" />
+                <img id="bgauche" src="images/contour.png" />
+                </div>
 				<div class="center">
 					<h1><?php echo PRESENTATION_TITRE; ?></h1>
 					<p><?php echo PRESENTATION_TEXTE; ?></p>

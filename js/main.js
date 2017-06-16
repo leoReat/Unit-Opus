@@ -17,32 +17,47 @@ $.getJSON('//freegeoip.net/json/?callback=?', function(infos) {
 	});
 	var ip = infos.ip;
 
-	$("form").submit(function(e){
-		e.preventDefault();
-		var mail = $("#contact input[type=mail]").val();
-		firebase.database().ref('visiteurs/' + now).set({
-			infos,
-			mail:mail
-		});
+	// $("form").submit(function(e){
+	// 	e.preventDefault();
+	// 	var mail = $("#contact input[type=mail]").val();
+	// 	firebase.database().ref('visiteurs/' + now).set({
+	// 		infos,
+	// 		mail:mail
+	// 	});
 
-		$("#contact").fadeOut();
-		$("#thanks").fadeIn();
-	});
+	// 	$("#contact").fadeOut();
+	// 	$("#thanks").fadeIn();
+	// });
 });
 
 
 $("header nav .home, header nav ul.navigation li a, div.center a.scroll").click(function(e){
 	e.preventDefault();
 	var strate = $(this).attr("href");
- 	if(strate) $('html, body').animate({scrollTop:$(strate).offset().top - 91}, 'slow');
+
+	var navHeight = ($(window).width() < 800) ? 0 : $("header").height();
+
+ 	if(strate) $('html, body').animate({scrollTop:$(strate).offset().top - navHeight}, 'slow');
 });
 
 $(document).scroll(function(){
-	var navHeight = $("header").height()
-	var heightStrates = $(window).height() - navHeight - 2;
-	var index = Math.ceil($(window).scrollTop() / heightStrates) - 1;
-	if(index < 0) index = 0;
-	if($(window).scrollTop() + $(window).height() >= $(document).height()) index = 2;
+	var navHeight = ($(window).width() < 800) ? 0 : $("header").height() - 2;
+	// var heightStrates = $(window).height() - navHeight - 2;
+	// var index = Math.ceil($(window).scrollTop() / heightStrates) - 1;
+	// if(index < 0) index = 0;
+	// if() index = 2;
+
+	var index = 0;
+	if($(window).scrollTop() > ($("#concept").offset().top - navHeight)){
+		index = 1;
+	}	
+	else if($(window).scrollTop() > ($("#contact").offset().top - navHeight)
+		|| ($(window).scrollTop() + $(window).height()) >= $(document).height()) index = 2;
+
+	var parallax = ($(window).scrollTop() - $("#concept").offset().top) / 7;
+	$("#concept img.center").css("margin-top", - parallax )
+
+
 	$("header nav ul.navigation li").removeClass("active");
 	$("header nav ul.navigation li").eq(index).addClass("active");
 });
@@ -51,4 +66,21 @@ $("footer p:nth-of-type(2) a, .overlay, button.close").click(function(e){
 	e.preventDefault();
 	$(".modal, .overlay").fadeToggle(300);
 	$("body").toggleClass("no-scroll");
+});
+
+
+$("#contact form").submit(function(e){
+	e.preventDefault();
+	var mail = $("#contact form input[type=mail]").val();
+	$.post("lib/mail.php", { mailTo: mail }).done(function( data ) {
+		if(data){
+
+			firebase.database().ref('newsletter/' + Date.now()).set({
+				mail:mail
+			});
+
+			$("#contact form").hide();
+			$("#thanks").fadeIn().css("display","inline-block");;
+		}
+	});
 });

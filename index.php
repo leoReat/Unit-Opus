@@ -60,8 +60,12 @@
 				<li><a href="#contact"><?php echo CONTACT; ?></a></li>
 			</ul>
 			<ul id="flag">
-				<li><a href="/fr"><img src="images/francais.png" alt="français"/></a></li>
-				<li><a href="/en"><img src="images/english.png" alt="english"/></a></li>
+				<?php 
+					$noMobileFr = ($lang == "fr") ? "no-mobile" : "";
+					$noMobileEn = ($lang == "en") ? "no-mobile" : "";
+				?>
+				<li class="<?php echo $noMobileFr; ?>"><a href="/fr"><img src="images/francais.png" alt="français"/></a></li>
+				<li class="<?php echo $noMobileEn; ?>"><a href="/en"><img src="images/english.png" alt="english"/></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -99,16 +103,25 @@
 					<ul>
 						<li><img src="images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
 						<li><img src="images/map.png" alt="logo telephone" /> OPUS<br>
-						5 rue Froment, 75011 Paris - FRANCE</li>
+						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
 						<li><img src="images/mail.png" alt="logo telephone" /> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
 					</ul>
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="images/fb.png" /></a></li>
 						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="images/tw.png" /></a></li>
-						<li><a href="" target="_BLANK"><img src="images/insta.png" /></a></li>
-						<li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li>
+						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="images/insta.png" /></a></li>
+						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
+						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
 					</ul>
 				</div>
+				<div id="thanks">
+					<p>Merci pour votre confiance ! Un e-mail de confirmation vient de vous être envoyé.</p>
+				</div>
+				<form action="" method="POST">
+					<h2>Abonnez-vous à la newsletter</h2>
+					<input type="mail" name="" placeholder="Adresse mail">
+					<button type="submit" class="button">Valider</button>
+				</form>
 			</div>
 		</article>
 	</section>
@@ -128,6 +141,8 @@
 			Capital social : 100 €<br/>
 			L’hébergement du site est assuré par OVH, société par actions simplifiée dont le siège social est au 2 rue Kellermann, 59100 Roubaix et dont le numéro de téléphone est le 0820 698 765.</p>
 	</div>
+
+	<button class="scroll-top"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>
 
 		
 	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>

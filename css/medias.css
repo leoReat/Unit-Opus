@@ -53,4 +53,58 @@
 		top:auto;
 		bottom:0;
 	}
+
+	div.center a.button, button.button{
+		margin-top:0;
+		margin-bottom:20px;
+	}
+
+	article{
+		padding: 20px;
+	}
+
+	div.center h1{
+		font-size: 30px;
+    	margin-top: 10px;
+	}
+
+	div.center p{
+		margin: 20px 0;
+	}
+
+	#concept img.center{
+		height:auto;
+		width:100%;
+	}
+
+	#concept div.center p{
+		margin-top:0;
+	}
+
+	form, #thanks{
+	    display: block;
+	    margin: auto;
+	    width: 100%;
+	    margin-top: 30px;
+	}
+	#thanks{
+		display:none;
+	}
+	button.button{
+		margin-top:20px;
+	}
+
+	header nav,
+	header nav ul.navigation{
+		font-size:0;
+	}
+
+	header nav ul.navigation li a, 
+	header nav ul#flag li a{
+		padding: 6px;
+	}
+
+	#contact .content.center .contact-left ul:not(.social) li span{
+		margin-left:0;
+	}
 }

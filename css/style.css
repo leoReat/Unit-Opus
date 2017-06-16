@@ -125,7 +125,7 @@ div.center p{
 div.center p strong{
 	font-weight:700;
 }
-div.center a.button{
+div.center a.button, button.button{
 	text-decoration:none;
 	color:#1007d1;
 	background:#fff;
@@ -225,6 +225,11 @@ div.center a.button{
     vertical-align: -3px;
 }
 
+#contact .content.center .contact-left ul:not(.social) li span{
+	display:inline-block;
+	margin-left:32px;
+}
+
 
 footer{
 	position:fixed;
@@ -304,3 +309,48 @@ button.close{
     cursor: pointer;
 }
 
+form, #thanks{
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    margin-left: 150px;
+}
+#thanks{
+	display:none;
+}
+form h2{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+form input{
+	box-sizing:border-box;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Assistant";
+    border-radius: 3px;
+}
+form button{
+	border:none;
+	cursor:pointer;
+}
+
+.scroll-top{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    width: 39px;
+    height: 39px;
+    outline:none;
+    cursor:pointer;
+}
+.scroll-top img{
+	width:100%;
+}

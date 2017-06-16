@@ -25,7 +25,8 @@
 		CEO : Antonin Cazin<br/>
 		Capital : 100€<br/>
 		The website is hosted by OVH, joint stock company. Head office stands at Kellerman Street, 2, 59100 Roubaix, FRANCE. Phone number : +33820 698 765");
-    define("COOKIES", "This site uses cookies to offer you the best service. By continuing your browsing, you agree to the use of cookies.");
+    define("COOKIES", "This site uses cookies to offer you the best service. ");
+    define("COOKIES2", "By continuing your browsing, you agree to the use of cookies.");
     define("COOKIES_AGREE", "I agree");
     define("COOKIES_LEARN", "Learn More");
 ?>

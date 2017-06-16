@@ -67,11 +67,6 @@ $(document).scroll(function(){
 	$("header nav ul.navigation li").eq(index).addClass("active");
 });
 
-$("footer p:nth-of-type(2) a, .overlay, button.close").click(function(e){
-	e.preventDefault();
-	$(".modal, .overlay").fadeToggle(300);
-	$("body").toggleClass("no-scroll");
-});
 
 
 $("#contact form").submit(function(e){

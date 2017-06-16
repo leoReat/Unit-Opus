@@ -1,6 +1,6 @@
 <?php
-	$lang = (isset($_GET["lang"]) && $_GET["lang"] == "en") ? "en" : "fr";
-	$pro = (isset($_GET["pro"])) ? "_pro" : "";
+	$lang = "fr";
+	if(isset($_GET["lang"]) && $_GET["lang"] == "en") $lang = "en";
 	require_once("lang/".$lang.".lang.php");
 ?>
 <!doctype html>
@@ -70,28 +70,36 @@
 		</nav>
 	</header>
 	<section>
-
-		<?php
-			require_once("assets/presentation".$pro.".html")
-		?>
-
+		<article id="presentation">
+			<div class="content">
+				<img src="images/sculpture.png" class="center" />
+				<div class="center">
+					<h1><?php echo PRESENTATION_TITRE; ?></h1>
+					<p><?php echo PRESENTATION_TEXTE; ?></p>
+					<a href="#concept" class="button scroll"><?php echo PRESENTATION_CTA; ?></a>
+				</div>
+			</div>
+		</article>
 
 		<article id="concept">
 			<div class="content">
 				<img src="images/iphone.png" class="center" alt=""/>
 				<div class="center">
-				<?php
-					require_once("assets/concept".$pro.".html")
-				?>
+					<p><?php echo CONCEPT_TEXTE_1; ?></p>
+					<p><?php echo CONCEPT_TEXTE_2; ?></p>
+					<a href="#contact" class="button scroll"><?php echo CONCEPT_CTA ?></a>
 				</div>
 			</div>
 		</article>
 
 		<article id="contact">
 			<div class="content center">
-				<div class="contact-left">
+				<div class="chat">
 					<h1><?php echo CONTACT_TITRE; ?></h1>
 					<p><?php echo CONTACT_TEXTE; ?></p>
+					<a href="http://m.me/GetOpusApp" target="_BLANK" class="button"><img src="images/messenger.svg" alt="live chat messenger avec Opus" /><?php echo CONTACT_CTA; ?></a>
+				</div>
+				<div class="contact-left">
 					<ul>
 						<li><img src="images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
 						<li><img src="images/map.png" alt="logo telephone" /> OPUS<br>
@@ -104,16 +112,14 @@
 						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="images/insta.png" /></a></li>
 						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
 						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="images/messenger.svg" alt="live chat messenger avec Opus" /></a></li>
 					</ul>
 				</div>
 				<div id="thanks">
 					<p>Merci pour votre confiance ! Un e-mail de confirmation vient de vous être envoyé.</p>
 				</div>
 				<form action="" method="POST">
-					<input type="text" name="" placeholder="Nom">
+					<h2>Abonnez-vous à la newsletter</h2>
 					<input type="mail" name="" placeholder="Adresse mail">
-					<textarea placeholder="Message"></textarea>
 					<button type="submit" class="button">Valider</button>
 				</form>
 			</div>

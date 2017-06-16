@@ -125,6 +125,7 @@ div.center h1{
 	font-size:45px;
 	font-weight:700;
 	letter-spacing:3px;
+    line-height: 50px;
 }
 div.center p{
 	font-size:18px;
@@ -192,27 +193,6 @@ div.center a.button:focus, button.button:focus{
 	transform:translate(-50%, -50%);
 	font-size:0;
 }
-#contact .content.center div.chat{
-	position:relative;
-}
-#contact .content.center div.chat p{
-	width:50%;
-}
-#contact .content.center div.chat a{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    line-height: 43px;
-    padding: 0 35px;
-}
-
-#contact .content.center div.chat a img{
-    width: 20px;
-    margin-right: 10px;
-    position: relative;
-    top: 4px;
-}
 
 #contact .content.center .contact-left{
 	display:inline-block;
@@ -220,7 +200,7 @@ div.center a.button:focus, button.button:focus{
 }
 
 #contact .content.center .contact-left{
-	width:calc(100% - 550px);
+	width:500px;
 	font-size:15px;
 }
 
@@ -328,33 +308,36 @@ button.close{
     cursor: pointer;
 }
 
+form{
+	text-align:right;
+}
 form, #thanks{
     display: inline-block;
     vertical-align: top;
-    width: 250px;
-    margin-left: 150px;
+    width: calc(100% - 550px);
+    margin-left:50px;
+    margin-top:85px;
 }
 #thanks{
 	display:none;
 }
-form h2{
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-form input{
-	box-sizing:border-box;
+form input, form textarea{
+	box-sizing: border-box;
     width: 100%;
     padding: 10px;
-    background: none;
-    border: 2px solid #fff;
-    color: #fff;
+    border: none;
+    color: #000;
     font-size: 14px;
     font-family: "Assistant";
-    border-radius: 3px;
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 4px;
 }
-form button{
+form textarea{
+	height:130px;
+	margin-bottom:0;
+}
+form button.button{
 	border:none;
 	cursor:pointer;
 }
@@ -383,16 +366,14 @@ form button{
     margin: 0px;
     left: 0px;
     top: 91px;
-    padding: 4px;
     text-align: left;
-    padding:10px 0;
 }
 #cookieChoiceInfo{
 	width:80%;
 	max-width:960px;
-	margin:auto;
     position: relative;
     text-align: right;
+    margin:10px auto;
 }
 #cookieChoiceInfo > div{
 	display:inline-block;
@@ -429,3 +410,50 @@ form button{
 	color:#fff;
 	background:#1007d1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   PRO    */
+#presentation.pro{
+	background-image:url(../images/background_pro.jpg);
+}
+
+#presentation.pro div.center{
+    left: auto;
+}
+
+#assurance{
+	font-size:0;
+	padding:90px 0;
+	background:#fff;
+	height:auto;
+}
+#assurance div{
+	width:calc(100% / 3 - 100px);
+	display:inline-block;
+	text-align:center;
+	font-size:19px;
+	letter-spacing:1px;
+	margin:0 50px;
+}
+#assurance div img{
+	margin-bottom:20px;
+}
+
+
+
+
+
+

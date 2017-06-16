@@ -4,12 +4,14 @@
 	define("CONTACT","Contact");
 	
 	define("PRESENTATION_TITRE", "Aimez, scannez, recevez.");
+	define("PRO_PRESENTATION_TITRE", "Opus, l’application qui digitalise vos points de vente.");
 	define("PRESENTATION_TEXTE", "<strong>Opus</strong>, l'application qui achemine vos oeuvres d'art préférées jusqu'à chez vous !");
 	define("PRESENTATION_CTA", "En savoir plus");
 	
 	define("CONCEPT_TEXTE_1", "<strong>Opus</strong> vous permet, au cours d’une visite de musée ou galerie d’art, d’acheter la lithographie d’une oeuvre que vous appréciez, sans passer par la boutique physique.");
+	define("PRO_CONCEPT_TEXTE_1", "Opus vous permet de digitaliser vos points de vente, permettant aux visiteurs d’acheter des produits dérivés sans passer par la boutique physique. En un seul geste, Opus reconnaît l’oeuvre devant laquelle se trouve le visiteur et permet une livraison du produit.");
 	define("CONCEPT_TEXTE_2", "En un seul geste, <strong>Opus</strong> reconnaît l’oeuvre devant laquelle vous vous trouvez et la livre directement chez vous.");
-	define("CONCEPT_CTA", "Téléchargez l’application");
+	define("CONCEPT_CTA", "Nous contacter");
 	
 	define("CONTACT_TITRE", "Contactez-nous.");
 	define("CONTACT_TEXTE", "N’hésitez pas à nous contacter si vous avez une question à poser, une suggestion à apporter, un partenariat à proposer ou pour tout autre demande.");

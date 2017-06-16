@@ -22,7 +22,8 @@
 		CEO : M. Antonin Cazin<br/>
 		Capital social : 100 €<br/>
 		L’hébergement du site est assuré par OVH, société par actions simplifiée dont le siège social est au 2 rue Kellermann, 59100 Roubaix et dont le numéro de téléphone est le 0820 698 765.");
-	define("COOKIES", "Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l\’utilisation des cookies.");
+	define("COOKIES", "Ce site utilise des cookies pour vous offrir le meilleur service.");
+	define("COOKIES2", "En poursuivant votre navigation, vous acceptez l\’utilisation des cookies.");
 	define("COOKIES_AGREE", "J\'accepte");
 	define("COOKIES_LEARN", "En savoir plus");
 ?>

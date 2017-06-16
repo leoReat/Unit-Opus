@@ -30,14 +30,17 @@
     var cookieConsentId = 'cookieChoiceInfo';
     var dismissLinkId = 'cookieChoiceDismiss';
 
-    function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
-      var butterBarStyles = 'position:fixed;width:100%;background-color:#F5F5DC;color:#000000;' +
-          'margin:0; left:0; bottom:0; padding:4px;z-index:1000;text-align:center;';
+    function _createHeaderElement(cookieText, dismissText, linkText, linkHref, cookieText2) {
+      var butterBarStyles = 'position:fixed;width:100%;background-color:#f9f9f9;color:#000000;' +
+          'margin:0; left:0; top:91px; padding:4px;text-align:left;';
 
-      var cookieConsentElement = document.createElement('div');
+      var parent = document.createElement("div");
+      var cookieConsentElement = document.createElement("div");
       cookieConsentElement.id = cookieConsentId;
-      cookieConsentElement.style.cssText = butterBarStyles;
-      cookieConsentElement.appendChild(_createConsentText(cookieText));
+      parent.appendChild(_createConsentText(cookieText));
+      parent.appendChild(_createConsentText(cookieText2));
+
+      cookieConsentElement.appendChild(parent);
 
 			      if (!!linkText && !!linkHref) {
         cookieConsentElement.appendChild(_createInformationLink(linkText, linkHref));
@@ -49,8 +52,7 @@
 
     function _createDialogElement(cookieText, dismissText, linkText, linkHref) {
       var glassStyle = 'position:fixed;width:100%;height:100%;z-index:999;' +
-          'top:0;left:0;opacity:0.5;filter:alpha(opacity=50);' +
-          'background-color:#ccc;';
+          'top:0;left:0;opacity:0.5;filter:alpha(opacity=50);';
       var dialogStyle = 'z-index:1000;position:fixed;left:50%;top:50%';
       var contentStyle = 'position:relative;left:-50%;margin-top:-25%;' +
           'background-color:#fff;padding:20px;box-shadow:4px 4px 25px #888;';
@@ -92,7 +94,7 @@
     }
 
     function _createConsentText(cookieText) {
-      var consentText = document.createElement('span');
+      var consentText = document.createElement('p');
       _setElementText(consentText, cookieText);
       return consentText;
     }
@@ -102,8 +104,6 @@
       _setElementText(dismissLink, dismissText);
       dismissLink.id = dismissLinkId;
       dismissLink.href = '#';
-      dismissLink.style.marginLeft = '15px';
-      dismissLink.style.color = '#000000';
       return dismissLink;
     }
 
@@ -111,9 +111,6 @@
       var infoLink = document.createElement('a');
       _setElementText(infoLink, linkText);
       infoLink.href = linkHref;
-      infoLink.target = '_blank';
-      infoLink.style.marginLeft = '15px';
-      infoLink.style.color = '#000000';
       return infoLink;
     }
 
@@ -123,21 +120,21 @@
       return false;
     }
 
-    function _showCookieConsent(cookieText, dismissText, linkText, linkHref, isDialog) {
+    function _showCookieConsent(cookieText, dismissText, linkText, linkHref, isDialog, cookieText2) {
       if (_shouldDisplayConsent()) {
         _removeCookieConsent();
         var consentElement = (isDialog) ?
             _createDialogElement(cookieText, dismissText, linkText, linkHref) :
-            _createHeaderElement(cookieText, dismissText, linkText, linkHref);
+            _createHeaderElement(cookieText, dismissText, linkText, linkHref, cookieText2);
         var fragment = document.createDocumentFragment();
         fragment.appendChild(consentElement);
-        document.body.appendChild(fragment.cloneNode(true));
+        document.getElementById("cookies").appendChild(fragment.cloneNode(true));
         document.getElementById(dismissLinkId).onclick = _dismissLinkClick;
       }
     }
 
-    function showCookieConsentBar(cookieText, dismissText, linkText, linkHref) {
-      _showCookieConsent(cookieText, dismissText, linkText, linkHref, false);
+    function showCookieConsentBar(cookieText, dismissText, linkText, linkHref, cookieText2) {
+      _showCookieConsent(cookieText, dismissText, linkText, linkHref, false, cookieText2);
     }
 
     function showCookieConsentDialog(cookieText, dismissText, linkText, linkHref) {

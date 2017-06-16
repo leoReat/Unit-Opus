@@ -140,13 +140,14 @@
 
 	<button class="scroll-top" href="#presentation"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>
 
-	
+		
     <!-- COOKIES -->
-
+    <div id="cookies"></div>
     <script src="js/cookiechoices.js"></script>
     <script>document.addEventListener('DOMContentLoaded',
             function(event){
-        cookieChoices.showCookieConsentBar('<?php echo  COOKIES; ?>', '<?php echo COOKIES_AGREE; ?>', '<?php echo COOKIES_LEARN; ?>', "http://test.fr");
+        cookieChoices.showCookieConsentBar('<?php echo COOKIES; ?>', '<?php echo COOKIES_AGREE; ?>', '<?php echo COOKIES_LEARN; ?>', "http://get-opus.fr", '<?php echo COOKIES2; ?>');
+              
                 $("footer p:nth-of-type(2) a, .overlay, button.close, #cookieChoiceInfo a:nth-of-type(1)").click(function(e){
                     e.preventDefault();
                     $(".modal, .overlay").fadeToggle(300);

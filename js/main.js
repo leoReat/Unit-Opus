@@ -41,20 +41,20 @@ $("header nav .home, header nav ul.navigation li a, div.center a.scroll, .scroll
 });
 
 $(document).scroll(function(){
-	var navHeight = ($(window).width() < 800) ? 0 : $("header").height() - 2;
+	var navHeight = ($(window).width() < 800) ? 0 : $("header").height();
 	// var heightStrates = $(window).height() - navHeight - 2;
 	// var index = Math.ceil($(window).scrollTop() / heightStrates) - 1;
 	// if(index < 0) index = 0;
 	// if() index = 2;
 
 	var index = 0;
-	if($(window).scrollTop() > ($("#concept").offset().top - navHeight)){
+	if($(window).scrollTop() >= ($("#concept").offset().top - navHeight)){
 		index = 1;
 		if($(window).width() > 799) $(".scroll-top").fadeIn();
 	}	
 	else if($(window).width() > 799) $(".scroll-top").fadeOut();
 
-	if($(window).scrollTop() > ($("#contact").offset().top - navHeight)
+	if($(window).scrollTop() >= ($("#contact").offset().top - navHeight)
 		|| ($(window).scrollTop() + $(window).height()) >= $(document).height()) index = 2;
 
 	if($(window).width() > 799){

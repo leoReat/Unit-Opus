@@ -63,9 +63,11 @@
 				<?php 
 					$noMobileFr = ($lang == "fr") ? "no-mobile" : "";
 					$noMobileEn = ($lang == "en") ? "no-mobile" : "";
+
+					$urlPro = (isset($_GET["pro"])) ? "/pro" : "";
 				?>
-				<li class="<?php echo $noMobileFr; ?>"><a href="/fr"><img src="images/francais.png" alt="français"/></a></li>
-				<li class="<?php echo $noMobileEn; ?>"><a href="/en"><img src="images/english.png" alt="english"/></a></li>
+				<li class="<?php echo $noMobileFr; ?>"><a href="/<?php echo $urlPro; ?>/fr"><img src="images/francais.png" alt="français"/></a></li>
+				<li class="<?php echo $noMobileEn; ?>"><a href="/<?php echo $urlPro; ?>/en"><img src="images/english.png" alt="english"/></a></li>
 			</ul>
 		</nav>
 	</header>

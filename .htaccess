@@ -28,5 +28,10 @@ RewriteRule ^ - [L]
 # Règles de réécriture d'URL :
 #--------------------------------------------------
 
-# En remplace /en ou /fr par index.php?lang=en
+# On remplace /pro par index.php?pro
+RewriteRule /?pro/?(en|fr)$ /index.php?lang=$1&pro [L]
+RewriteRule /?(pro)$ /index.php?pro [L]
+
+# On remplace /en ou /fr par index.php?lang=en
 RewriteRule /?(en|fr)$ index.php?lang=$1 [L]
+

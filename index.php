@@ -2,14 +2,16 @@
 	$lang = (isset($_GET["lang"]) && $_GET["lang"] == "en") ? "en" : "fr";
 	$pro = (isset($_GET["pro"])) ? "_pro" : "";
 	require_once("lang/".$lang.".lang.php");
+
+	$urlBASE = "/Unit-opus/";
 ?>
 <!doctype html>
 <head>
 	<title>OPUS - Digitalisez votre musée</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/style.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/medias.css"> -->
-    <link rel="stylesheet" media="screen and (max-width: 980px)" href="css/medias.css" type="text/css" />
-	<link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" media="screen and (max-width: 980px)" href="<?php echo $urlBASE; ?>css/medias.css" type="text/css" />
+	<link rel="icon" type="image/png" href="<?php echo $urlBASE; ?>images/favicon.png" />
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Opus, musée, digital">
@@ -18,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-	<script src="js/jquery.min.js"></script>
+	<script src="<?php echo $urlBASE; ?>js/jquery.min.js"></script>
 
     <!-- SCRIPT HOTJAR -->
 
@@ -53,7 +55,7 @@
 <?php include_once("analyticstracking.php") ?>
 	<header>
 		<nav>
-			<a href="#presentation" class="home no-mobile"><img src="images/logo.png" alt="Logo Opus" id="logo" /></a>
+			<a href="#presentation" class="home no-mobile"><img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo" /></a>
 			<ul class="navigation">
 				<li class="active"><a href="#presentation"><?php echo ACCUEIL; ?></a></li>
 				<li><a href="#concept"><?php echo CONCEPT; ?></a></li>
@@ -66,8 +68,8 @@
 
 					$urlPro = (isset($_GET["pro"])) ? "/pro" : "";
 				?>
-				<li class="<?php echo $noMobileFr; ?>"><a href="/<?php echo $urlPro; ?>/fr"><img src="images/francais.png" alt="français"/></a></li>
-				<li class="<?php echo $noMobileEn; ?>"><a href="/<?php echo $urlPro; ?>/en"><img src="images/english.png" alt="english"/></a></li>
+				<li class="<?php echo $noMobileFr; ?>"><a href="<?php echo $urlPro; ?>/fr"><img src="<?php echo $urlBASE; ?>images/francais.png" alt="français"/></a></li>
+				<li class="<?php echo $noMobileEn; ?>"><a href="<?php echo $urlPro; ?>/en"><img src="<?php echo $urlBASE; ?>images/english.png" alt="english"/></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -80,7 +82,7 @@
 
 		<article id="concept">
 			<div class="content">
-				<img src="images/iphone.png" class="center" alt=""/>
+				<img src="<?php echo $urlBASE; ?>images/iphone.png" class="center" alt=""/>
 				<div class="center">
 				<?php
 					require_once("assets/concept".$pro.".html")
@@ -95,29 +97,25 @@
 					<h1><?php echo CONTACT_TITRE; ?></h1>
 					<p><?php echo CONTACT_TEXTE; ?></p>
 					<ul>
-						<li><img src="images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
-						<li><img src="images/map.png" alt="logo telephone" /> OPUS<br>
+						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
+						<li><img src="<?php echo $urlBASE; ?>images/map.png" alt="logo telephone" /> OPUS<br>
 						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
-						<li><img src="images/mail.png" alt="logo telephone" /> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
+						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" /> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
 					</ul>
 					<ul class="social">
-						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="images/fb.png" /></a></li>
-						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="images/tw.png" /></a></li>
-						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="images/insta.png" /></a></li>
+						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" /></a></li>
+						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png" /></a></li>
+						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" /></a></li>
 						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
 						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="images/messenger.svg" alt="live chat messenger avec Opus" /></a></li>
+						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.svg" alt="live chat messenger avec Opus" /></a></li>
 					</ul>
 				</div>
 				<div id="thanks">
 					<p>Merci pour votre confiance ! Un e-mail de confirmation vient de vous être envoyé.</p>
 				</div>
-				<form action="" method="POST">
-					<input type="text" name="" placeholder="Nom">
-					<input type="mail" name="" placeholder="Adresse mail">
-					<textarea placeholder="Message"></textarea>
-					<button type="submit" class="button">Valider</button>
-				</form>
+				
+				<?php require_once("assets/contact".$pro.".html"); ?>
 			</div>
 		</article>
 	</section>
@@ -134,12 +132,12 @@
 		<p><?php echo MENTIONS_TEXTE; ?></p>
 	</div>
 
-	<button class="scroll-top" href="#presentation"><img src="images/scroll-top.png" alt="Retour en haut de page" /></button>
+	<button class="scroll-top" href="#presentation"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
 
 		
     <!-- COOKIES -->
     <div id="cookies"></div>
-    <script src="js/cookiechoices.js"></script>
+    <script src="<?php echo $urlBASE; ?>js/cookiechoices.js"></script>
     <script>document.addEventListener('DOMContentLoaded',
             function(event){
         cookieChoices.showCookieConsentBar('<?php echo COOKIES; ?>', '<?php echo COOKIES_AGREE; ?>', '<?php echo COOKIES_LEARN; ?>', "http://get-opus.fr", '<?php echo COOKIES2; ?>');
@@ -153,7 +151,7 @@
     </script>
 		
 	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-	<script src="js/main.js"></script>
+	<script src="<?php echo $urlBASE; ?>js/main.js"></script>
 
 </body>
 </html>

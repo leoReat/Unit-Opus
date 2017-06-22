@@ -172,7 +172,8 @@ div.center{
 	top:50%;
 	transform:translateY(-50%);
 }
-div.center h1{
+div.center h1,
+form h2{
 	font-size:45px;
 	font-weight:700;
 	letter-spacing:3px;
@@ -251,7 +252,7 @@ div.center a.button:focus, button.button:focus{
 }
 
 #contact .content.center .contact-left{
-	width:500px;
+	width:calc(100% - 550px);
 	font-size:15px;
 }
 
@@ -365,9 +366,15 @@ form{
 form, #thanks{
     display: inline-block;
     vertical-align: top;
-    width: calc(100% - 550px);
+    width:500px;
     margin-left:50px;
     margin-top:85px;
+    background:#3e3e3e;
+    padding:30px;
+    box-sizing:border-box;
+
+    margin-top: 0;
+    vertical-align: bottom;
 }
 #thanks{
 	display:none;
@@ -383,6 +390,12 @@ form input, form textarea{
     background: #fff;
     margin-bottom: 15px;
     border-radius: 4px;
+}
+form h2{
+	text-align:left;
+	font-size:32px;
+	line-height:36px;
+	margin-bottom:30px;
 }
 form textarea{
 	height:130px;
@@ -498,6 +511,7 @@ form button.button{
 	font-size:19px;
 	letter-spacing:1px;
 	margin:0 50px;
+	vertical-align: top;
 }
 #assurance div img{
 	margin-bottom:20px;

@@ -33,5 +33,5 @@ RewriteRule /?pro/?(en|fr)$ /index.php?lang=$1&pro [L]
 RewriteRule /?(pro)$ /index.php?pro [L]
 
 # On remplace /en ou /fr par index.php?lang=en
-RewriteRule /?(en|fr)$ index.php?lang=$1 [L]
+RewriteRule /?(en|fr)$ /index.php?lang=$1 [L]
 

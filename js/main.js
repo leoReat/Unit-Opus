@@ -16,18 +16,6 @@ $.getJSON('//freegeoip.net/json/?callback=?', function(infos) {
 		infos
 	});
 	var ip = infos.ip;
-
-	// $("form").submit(function(e){
-	// 	e.preventDefault();
-	// 	var mail = $("#contact input[type=mail]").val();
-	// 	firebase.database().ref('visiteurs/' + now).set({
-	// 		infos,
-	// 		mail:mail
-	// 	});
-
-	// 	$("#contact").fadeOut();
-	// 	$("#thanks").fadeIn();
-	// });
 });
 
 
@@ -70,17 +58,26 @@ $(document).scroll(function(){
 
 
 $("#contact form").submit(function(e){
-	e.preventDefault();
-	var mail = $("#contact form input[type=mail]").val();
-	$.post("lib/mail.php", { mailTo: mail }).done(function( data ) {
-		if(data){
+	// e.preventDefault();
+	// var mail = $("#contact form input[type=mail]").val();
+	// var pro = $("#contact form input[type=hidden]").val();
 
-			firebase.database().ref('newsletter/' + Date.now()).set({
-				mail:mail
-			});
+	// datas = {mailTo:mail};
+	// if(pro == "pro"){
+	// 	datas["message"] = $("#contact form textarea").val();
+	// 	datas["nom"] = $("#contact form input[type=text]").val();
+	// }
 
-			$("#contact form").hide();
-			$("#thanks").fadeIn().css("display","inline-block");;
-		}
-	});
+	// console.log(datas);
+
+	// $.post("lib/mail.php", datas).done(function( data ) {
+	// 	if(data){
+	// 		console.log(data)
+	// 		firebase.database().ref('newsletter'+pro+'/' + Date.now()).set({
+	// 			mail:mail
+	// 		});
+	// 		$("#contact form").hide();
+	// 		$("#thanks").fadeIn().css("display","inline-block");;
+	// 	}
+	// });
 });

@@ -37,8 +37,10 @@
       var parent = document.createElement("div");
       var cookieConsentElement = document.createElement("div");
       cookieConsentElement.id = cookieConsentId;
+
+      if($(window).width() <= 800) cookieText += " "+cookieText2;
       parent.appendChild(_createConsentText(cookieText));
-      parent.appendChild(_createConsentText(cookieText2));
+      if($(window).width() > 800) parent.appendChild(_createConsentText(cookieText2));
 
       cookieConsentElement.appendChild(parent);
 

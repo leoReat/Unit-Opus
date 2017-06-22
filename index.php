@@ -83,6 +83,7 @@
 				<?php
 					require_once("assets/concept".$pro.".html")
 				?>
+                    </div>
 				</div>
 			</div>
 		</article>
@@ -124,6 +125,8 @@
 		<p>Opus - <?php echo COPYRIGHT; ?> © 2017</p>
 		<p><a href=""><?php echo MENTIONS; ?></a></p>
 	</footer>
+
+
 
 	<div class="overlay"></div>
 	<div class="modal">

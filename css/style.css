@@ -204,11 +204,11 @@ div.center a.button, button.button{
 	letter-spacing:1px;
 	font-size:19px;
 	margin-top:25px;
-	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.37);
+	/*box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.37);*/
 	transition:all ease 0.3s;
 }
 div.center a.button:hover, button.button:hover{
-	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+	/*box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);*/
 }
 div.center a.button:active, button.button:active,
 div.center a.button:focus, button.button:focus{
@@ -245,7 +245,73 @@ button.scroll.arrow{
 	background:#1007d1;
 	color:#fff;
 }
-
+#concept #connect{
+	max-width:300px;
+	min-height:110px;
+	position:relative;
+}
+#concept #connect input,
+#concept #connect button{
+   
+    border: none;
+    padding: 13px;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 1px;
+    width:calc(100% - 60px);
+    outline:none;
+}
+#concept #connect button{
+	width:60px;
+	position: absolute;
+	right:0;
+	top:0;
+    background: #1007d1;
+    border-radius: 0 5Px 5px 0;
+    font-size: 14px;
+    color:#fff;
+}
+#concept div.center a:not(.connect){
+	margin-top:0;
+	box-sizing:border-box;
+	width:100%;
+}
+#concept #connect a.connect{
+	transition:all ease 1s 0.6s;
+	opacity:0;
+	cursor:default;
+	margin-top:20px;
+}
+#concept #connect a.connect:nth-of-type(1){
+    margin-right: 8px;
+}
+#concept #connect.actif a.connect{
+	opacity:1;
+	cursor:pointer;
+}
+#concept #connect form{
+	width:0;
+	overflow:hidden;
+	position:absolute;
+	z-index:2;
+	left:0;
+	top:0;
+	transition: width ease-in-out 0.5s, padding linear 0.3s;
+	text-align:left;
+}
+#concept #connect.actif form{
+	width:100%;
+}
+#concept #connect p{
+	margin: 0;
+    text-align: center;
+    opacity:0;
+    transition:all ease 0.6s 0.4s;
+}
+#concept #connect.actif p{
+    opacity:1;
+}
 #contact{
 	background:#28292b;
 	margin-bottom:65px;
@@ -299,6 +365,7 @@ button.scroll.arrow{
 	display:inline-block;
 	margin-left:32px;
 }
+
 
 
 footer{
@@ -382,7 +449,7 @@ button.close{
 form{
 	text-align:right;
 }
-form, #thanks{
+#contact form{
     display: inline-block;
     vertical-align: top;
     width:500px;
@@ -481,13 +548,13 @@ form button.button{
 	font-weight:600;
 	letter-spacing:1px;
 	font-size:14px;
-	box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+	/*box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);*/
 	transition:all ease 0.3s;
 	vertical-align:top;
     margin: 4px 10px;
 }
 #cookieChoiceInfo a:hover{
-	box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+	/*box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);*/
 }
 #cookieChoiceInfo a:nth-of-type(2){
 	color:#fff;
@@ -534,6 +601,7 @@ form button.button{
 }
 #assurance div img{
 	margin-bottom:20px;
+	width:70px;
 }
 
 

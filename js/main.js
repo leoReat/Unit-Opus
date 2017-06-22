@@ -7,19 +7,58 @@ var config = {
 	storageBucket: "unit-60c0b.appspot.com",
 	messagingSenderId: "1051655555307"
 };
-
 firebase.initializeApp(config);
 
-$.getJSON('//freegeoip.net/json/?callback=?', function(infos) {
-	var now =  Date.now();
-		firebase.database().ref('visiteurs/' + now).set({
-		infos
+var google = new firebase.auth.GoogleAuthProvider();
+var facebook = new firebase.auth.FacebookAuthProvider();
+
+$("#concept #connect .inscription").click(function(e){
+	e.preventDefault();
+	$("#concept #connect").addClass("actif");
+});
+
+function newMail(datas){
+	$.post("assets/newsletter.php", datas).done(function( data ) {
+		console.log(data);
+		if(data == 2){
+			$("#connect").hide();
+			$("#thanks").fadeIn();
+		}
 	});
-	var ip = infos.ip;
+}
+
+$("#connect form").submit(function(e){
+	e.preventDefault();
+	var mail = $("#connect form input").val();
+
+	datas = {mailTo:mail, nom:""};
+	newMail(datas);
+});
+
+$(".button.connect").click(function(e){
+	if(!$(this).parent().parent().hasClass("actif")) return;
+	e.preventDefault();
+
+	var provider = $(this).hasClass("facebook") ? facebook : google;
+	firebase.auth().signInWithPopup(provider).then(function(result) {
+		datas = {mailTo:result.user.email, nom:result.user.displayName};
+		newMail(datas);
+			
+	}).catch(function(error) {
+		console.log(error)
+	});
+});
+
+firebase.auth().onAuthStateChanged(function(user) {
+	// Si l'utilisateur est déjà connecté, on ne lui propose pas de s'inscrire à la newsletter
+	if (user) $("#connect").fadeOut();
 });
 
 
-$("header nav .home, header nav ul.navigation li a, a.scroll, .scroll-top").click(function(e){
+
+
+
+$("header nav .home, header nav ul.navigation li a, a.scroll, button.scroll, .scroll-top").click(function(e){
 	e.preventDefault();
 	var strate = $(this).attr("href");
 
@@ -58,26 +97,26 @@ $(document).scroll(function(){
 
 
 $("#contact form").submit(function(e){
-	// e.preventDefault();
+	e.preventDefault();
 	// var mail = $("#contact form input[type=mail]").val();
 	// var pro = $("#contact form input[type=hidden]").val();
 
 	// datas = {mailTo:mail};
 	// if(pro == "pro"){
-	// 	datas["message"] = $("#contact form textarea").val();
-	// 	datas["nom"] = $("#contact form input[type=text]").val();
+		datas["message"] = $("#contact form textarea").val();
+		datas["nom"] = $("#contact form input[type=text]").val();
 	// }
 
-	// console.log(datas);
+	console.log(datas);
 
-	// $.post("lib/mail.php", datas).done(function( data ) {
-	// 	if(data){
-	// 		console.log(data)
-	// 		firebase.database().ref('newsletter'+pro+'/' + Date.now()).set({
-	// 			mail:mail
-	// 		});
-	// 		$("#contact form").hide();
-	// 		$("#thanks").fadeIn().css("display","inline-block");;
-	// 	}
-	// });
+	$.post("lib/mail.php", datas).done(function( data ) {
+		if(data){
+			// console.log(data)
+			// firebase.database().ref('newsletter'+pro+'/' + Date.now()).set({
+			// 	mail:mail
+			// });
+			$("#contact form").hide();
+			// $("#thanks").fadeIn().css("display","inline-block");
+		}
+	});
 });

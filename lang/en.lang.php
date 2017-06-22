@@ -12,7 +12,7 @@
 	define("PRO_CONCEPT_TEXTE_1", "Opus vous permet de digitaliser vos points de vente, permettant aux visiteurs d’acheter des produits dérivés sans passer par la boutique physique. En un seul geste, Opus reconnaît l’oeuvre devant laquelle se trouve le visiteur et permet une livraison du produit.");
 	define("CONCEPT_TEXTE_2", "Scan the art piece while you’re admiring it and <strong>Opus</strong> delivers it directly to you.
 ");
-	define("CONCEPT_CTA", "Contact us");
+	define("CONCEPT_CTA", "Subscribe to newsletter");
 	
 	define("CONTACT_TITRE", "Contact us.");
 	define("CONTACT_TEXTE", "Contact us for any question, suggestion, commercial partnership or any request");

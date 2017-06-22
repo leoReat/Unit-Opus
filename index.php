@@ -1,5 +1,5 @@
 <?php
-	require_once("assets/configphp");
+	require_once("assets/config.php");
 ?>
 <!doctype html>
 <head>
@@ -48,7 +48,6 @@
 
 </head>
 <body>
-<?php include_once("analyticstracking.php") ?>
 	<header>
 		<nav>
 			<a href="#presentation" class="home no-mobile"><img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo" /></a>
@@ -83,6 +82,17 @@
 				<?php
 					require_once("assets/concept".$pro.".html")
 				?>
+
+					<div id="connect">
+						<a href="#concept" class="button inscription"><?php echo CONCEPT_CTA ?></a> <br>
+						<form>
+							<input type="text" name="" placeholder="Adresse mail">
+							<button>OK</button>
+							<p>OU</p>
+							<a href="#concept" class="button google connect">Google</a>
+							<a href="#concept" class="button facebook connect">Facebook</a>
+						</form>
+					</div>
 				</div>
 			</div>
 		</article>
@@ -107,11 +117,8 @@
 						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.svg" alt="live chat messenger avec Opus" /></a></li>
 					</ul>
 				</div>
-				<div id="thanks">
-					<p>Merci pour votre confiance ! Un e-mail de confirmation vient de vous être envoyé.</p>
-				</div>
 				
-				<?php require_once("assets/contact".$pro.".html"); ?>
+				<?php require_once("assets/contact_pro.html"); ?>
 			</div>
 		</article>
 	</section>

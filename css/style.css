@@ -19,7 +19,7 @@ html, body, article, section{
 	height:100%;
 }
 article{
-	height:calc(100% - 91px);
+	height:calc(100% - 90px);
 }
 
 body{
@@ -133,6 +133,7 @@ section article{
 	top: 0;
 	right: 0;
 	transition: all ease 0.3s;
+	opacity:0.5;
 }
 #hgauche{
 	position: absolute;
@@ -140,6 +141,7 @@ section article{
 	left: 0;
 	transform: rotate(-90deg);
 	transition: all ease 0.3s;
+	opacity:0.5;
 }
 #bdroit{
 	position: absolute;
@@ -147,6 +149,7 @@ section article{
 	right: 0;
 	transform: rotate(90deg);
 	transition: all ease 0.3s;
+	opacity:0.5;
 }
 #bgauche{
 	position: absolute;
@@ -154,6 +157,7 @@ section article{
 	left: 0;
 	transform: rotate(180deg);
 	transition: all ease 0.3s;
+	opacity:0.5;
 }
 .center{
 	animation:fade ease 2s;
@@ -213,6 +217,21 @@ div.center a.button:focus, button.button:focus{
 #concept{
 	background:#fdfcfc;
 }
+
+button.scroll.arrow{
+	width:25px;
+	height:25px;
+	background:none;
+	border:none;
+	outline:none;
+	position:absolute;
+	bottom:30px;
+	left:calc(50%);
+	transform:translateX(-50%) rotate(90deg);
+	padding:0;
+	cursor:pointer;
+}
+
 #concept img.center{
 	height:90%;
 	width:auto;

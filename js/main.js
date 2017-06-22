@@ -19,7 +19,7 @@ $.getJSON('//freegeoip.net/json/?callback=?', function(infos) {
 });
 
 
-$("header nav .home, header nav ul.navigation li a, div.center a.scroll, .scroll-top").click(function(e){
+$("header nav .home, header nav ul.navigation li a, a.scroll, .scroll-top").click(function(e){
 	e.preventDefault();
 	var strate = $(this).attr("href");
 

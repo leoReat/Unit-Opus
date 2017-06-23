@@ -151,4 +151,21 @@
 		width: 100%;
 		margin:10px 0;
 	}
+
+	#concept #connect{
+		max-width:none;
+	}
+	#concept #connect form{
+		margin-top:0;
+	}
+	#concept #connect{
+		min-height:150px;
+	}
+	#concept #connect a.connect{
+		padding:10px 15px;
+	}
+
+	#concept div.center a:not(.connect){
+		padding:10px;
+	}
 }

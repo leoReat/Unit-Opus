@@ -15,16 +15,19 @@ var facebook = new firebase.auth.FacebookAuthProvider();
 $("#concept #connect .inscription").click(function(e){
 	e.preventDefault();
 	$("#concept #connect").addClass("actif");
+	$("#concept #connect input").focus();
 });
 
 function newMail(datas){
-	// $.post("assets/newsletter.php", datas).done(function( data ) {
-	// 	console.log(data);
-	// 	if(data == 2){
-	// 		$("#connect").hide();
-	// 		$("#thanks").fadeIn();
-	// 	}
-	// });
+	var pro = $("form input[name='pro']").val();
+	datas["id"] = (pro == "_pro") ? 7 : 7;
+	$.post("assets/newsletter.php", datas).done(function( data ) {
+		console.log(data);
+		if(data == 2){
+			$("#connect").hide();
+			$("#thanks").fadeIn();
+		}
+	});
 }
 
 $("#connect form").submit(function(e){
@@ -36,8 +39,9 @@ $("#connect form").submit(function(e){
 });
 
 $(".button.connect").click(function(e){
-	if(!$(this).parent().parent().hasClass("actif")) return;
 	e.preventDefault();
+	if(!$(this).closest("#connect").hasClass("actif")) return;
+	
 
 	var provider = $(this).hasClass("facebook") ? facebook : google;
 	firebase.auth().signInWithPopup(provider).then(function(result) {

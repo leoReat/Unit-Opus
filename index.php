@@ -93,8 +93,8 @@
 
 							<button>OK</button>
 							<p>OU</p>
-							<a href="#concept" class="button google connect">Google</a>
-							<a href="#concept" class="button facebook connect">Facebook</a>
+							<p><a href="#concept" class="button google connect">Google</a>
+							<a href="#concept" class="button facebook connect">Facebook</a></p>
 						</form>
 					</div>
 
@@ -111,7 +111,7 @@
 						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
 						<li><img src="<?php echo $urlBASE; ?>images/map.png" alt="logo telephone" /> OPUS<br>
 						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
-						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" /> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
+						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" /> <a href="mailto:contact@get-opus.fr">contact@get-opus.fr</a></li>
 					</ul>
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" /></a></li>
@@ -130,6 +130,7 @@
 					<button type="submit" class="button">Envoyer</button>
 				</form>
 			</div>
+			<button class="scroll-top" href="#presentation"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
 		</article>
 	</section>
 
@@ -144,9 +145,6 @@
 		<h1><?php echo MENTIONS_TITRE; ?></h1>
 		<p><?php echo MENTIONS_TEXTE; ?></p>
 	</div>
-
-	<button class="scroll-top" href="#presentation"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
-
 		
     <!-- COOKIES -->
     <div id="cookies"></div>

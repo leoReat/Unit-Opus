@@ -3,4 +3,4 @@
 	$pro = (isset($_GET["pro"])) ? "_pro" : "";
 	require_once("lang/".$lang.".lang.php");
 
-	$urlBASE = "/Unit-opus/";
+	$urlBASE = "/Unit-compet/Unit-Opus/";

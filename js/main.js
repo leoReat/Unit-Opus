@@ -15,9 +15,12 @@ var facebook = new firebase.auth.FacebookAuthProvider();
 $("#concept #connect .inscription").click(function(e){
 	e.preventDefault();
 	$("#concept #connect").addClass("actif");
+	$("#concept #connect input").focus();
 });
 
 function newMail(datas){
+	var pro = $("form input[name='pro']").val();
+	datas["id"] = (pro == "_pro") ? 8 : 7;
 	$.post("assets/newsletter.php", datas).done(function( data ) {
 		console.log(data);
 		if(data == 2){
@@ -36,8 +39,9 @@ $("#connect form").submit(function(e){
 });
 
 $(".button.connect").click(function(e){
-	if(!$(this).parent().parent().hasClass("actif")) return;
 	e.preventDefault();
+	if(!$(this).closest("#connect").hasClass("actif")) return;
+	
 
 	var provider = $(this).hasClass("facebook") ? facebook : google;
 	firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -61,6 +65,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 $("header nav .home, header nav ul.navigation li a, a.scroll, button.scroll, .scroll-top").click(function(e){
 	e.preventDefault();
 	var strate = $(this).attr("href");
+	if(typeof strate == "undefined") strate = "#presentation";
 
 	var navHeight = ($(window).width() < 800) ? 0 : $("header").height();
 
@@ -75,7 +80,9 @@ $(document).scroll(function(){
 	// if() index = 2;
 
 	var index = 0;
-	if($(window).scrollTop() >= ($("#concept").offset().top - navHeight)){
+	var pro = $("form input[name='pro']").val();
+	var concept = (pro == "_pro") ? $("#assurance").offset().top : $("#concept").offset().top;
+	if($(window).scrollTop() >= (concept - navHeight)){
 		index = 1;
 		if($(window).width() > 799) $(".scroll-top").fadeIn();
 	}	

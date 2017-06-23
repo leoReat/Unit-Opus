@@ -5,7 +5,6 @@
 <head>
 	<title>OPUS - Digitalisez votre musée</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/medias.css"> -->
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="<?php echo $urlBASE; ?>css/medias.css" type="text/css" />
 	<link rel="icon" type="image/png" href="<?php echo $urlBASE; ?>images/favicon.png" />
 	
@@ -88,11 +87,12 @@
 					<div id="connect">
 						<a href="#concept" class="button inscription"><?php echo CONCEPT_CTA ?></a> <br>
 						<form>
-							<input type="text" name="mailing" placeholder="Adresse mail">
+							<input type="text" name="" placeholder="Adresse mail">
+							<input type="hidden" name="pro" value="<?php echo $pro; ?>">
 							<button>OK</button>
 							<p>OU</p>
-							<a href="#concept" class="button google connect">Google</a>
-							<a href="#concept" class="button facebook connect">Facebook</a>
+							<p><a href="#concept" class="button google connect">Google</a>
+							<a href="#concept" class="button facebook connect">Facebook</a></p>
 						</form>
 					</div>
 
@@ -109,7 +109,7 @@
 						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" title="pictogramme téléphone"/> 06.70.28.61.80</li>
 						<li><img src="<?php echo $urlBASE; ?>images/map.png" alt="logo telephone" title="pictogramme carte"/> OPUS<br>
 						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
-						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" title="pictogramme mail"/> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
+						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" /> <a href="mailto:contact@get-opus.fr">contact@get-opus.fr</a></li>
 					</ul>
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus" title="redirection facebook"/></a></li>
@@ -117,12 +117,18 @@
 						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus" title="redirection instagram"/></a></li>
 						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
 						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.svg" alt="live chat messenger avec Opus" title="discussion avec opus"/></a></li>
+						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" /></a></li>
 					</ul>
 				</div>
 				
-				<?php require_once("assets/contact_pro.html"); ?>
+				<form action="" method="POST">
+					<input type="text" name="" placeholder="Nom">
+					<input type="mail" name="" placeholder="Adresse mail">
+					<textarea placeholder="Message"></textarea>
+					<button type="submit" class="button">Envoyer</button>
+				</form>
 			</div>
+			<button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
 		</article>
 	</section>
 
@@ -137,9 +143,6 @@
 		<h1><?php echo MENTIONS_TITRE; ?></h1>
 		<p><?php echo MENTIONS_TEXTE; ?></p>
 	</div>
-
-	<button class="scroll-top" href="#presentation"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="aller vers le haut"/></button>
-
 		
     <!-- COOKIES -->
     <div id="cookies"></div>

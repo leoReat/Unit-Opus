@@ -79,7 +79,9 @@ $(document).scroll(function(){
 	// if() index = 2;
 
 	var index = 0;
-	if($(window).scrollTop() >= ($("#concept").offset().top - navHeight)){
+	var pro = $("form input[name='pro']").val();
+	var concept = (pro == "_pro") ? $("#assurance").offset().top : $("#concept").offset().top;
+	if($(window).scrollTop() >= (concept - navHeight)){
 		index = 1;
 		if($(window).width() > 799) $(".scroll-top").fadeIn();
 	}	

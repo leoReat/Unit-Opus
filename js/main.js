@@ -20,7 +20,7 @@ $("#concept #connect .inscription").click(function(e){
 
 function newMail(datas){
 	var pro = $("form input[name='pro']").val();
-	datas["id"] = (pro == "_pro") ? 7 : 7;
+	datas["id"] = (pro == "_pro") ? 8 : 7;
 	$.post("assets/newsletter.php", datas).done(function( data ) {
 		console.log(data);
 		if(data == 2){

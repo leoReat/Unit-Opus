@@ -168,4 +168,8 @@
 	#concept div.center a:not(.connect){
 		padding:10px;
 	}
+
+	#contact form{
+		padding-right:30px;
+	}
 }

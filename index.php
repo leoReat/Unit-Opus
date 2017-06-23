@@ -119,7 +119,7 @@
 						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" /></a></li>
 						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
 						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.svg" alt="live chat messenger avec Opus" /></a></li>
+						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" /></a></li>
 					</ul>
 				</div>
 				

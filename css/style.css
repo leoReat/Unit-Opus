@@ -376,6 +376,10 @@ button.scroll.arrow img{
 	text-decoration:none;
 }
 
+#contact .content.center .contact-left li a img{
+	width:42px;
+}
+
 #contact .content.center ul.social li{
 	display:inline-block;
 	margin:0;

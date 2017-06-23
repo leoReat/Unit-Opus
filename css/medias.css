@@ -146,4 +146,9 @@
 	#cookieChoiceInfo{
 		width:auto;
 	}
+
+	#contact form{
+		width: 100%;
+		margin:10px 0;
+	}
 }

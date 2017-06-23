@@ -87,7 +87,7 @@
 					<div id="connect">
 						<a href="#concept" class="button inscription"><?php echo CONCEPT_CTA ?></a> <br>
 						<form>
-							<input type="text" name="" placeholder="Adresse mail">
+							<input type="text" name="mail" placeholder="Adresse mail">
 							<input type="hidden" name="pro" value="<?php echo $pro; ?>">
 							<button>OK</button>
 							<p>OU</p>
@@ -122,8 +122,8 @@
 				</div>
 				
 				<form action="#" method="POST">
-					<input type="text" name="" placeholder="Nom">
-					<input type="mail" name="" placeholder="Adresse mail">
+					<input type="text" name="nom" placeholder="Nom">
+					<input type="mail" name="mail" placeholder="Adresse mail">
 					<textarea placeholder="Message"></textarea>
 					<button type="submit" class="button">Envoyer</button>
 				</form>

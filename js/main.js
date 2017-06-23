@@ -65,6 +65,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 $("header nav .home, header nav ul.navigation li a, a.scroll, button.scroll, .scroll-top").click(function(e){
 	e.preventDefault();
 	var strate = $(this).attr("href");
+	if(typeof strate == "undefined") strate = "#presentation";
 
 	var navHeight = ($(window).width() < 800) ? 0 : $("header").height();
 

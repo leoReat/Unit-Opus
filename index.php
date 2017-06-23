@@ -5,7 +5,6 @@
 <head>
 	<title>OPUS - Digitalisez votre musée</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/medias.css"> -->
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="<?php echo $urlBASE; ?>css/medias.css" type="text/css" />
 	<link rel="icon" type="image/png" href="<?php echo $urlBASE; ?>images/favicon.png" />
 	
@@ -130,7 +129,7 @@
 					<button type="submit" class="button">Envoyer</button>
 				</form>
 			</div>
-			<button class="scroll-top" href="#presentation"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
+			<button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
 		</article>
 	</section>
 

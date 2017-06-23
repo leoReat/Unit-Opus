@@ -82,7 +82,9 @@
 				<?php
 					require_once("assets/concept".$pro.".html")
 				?>
-
+					<div id="thanks">
+						<p>Merci pour votre confiance ! Un e-mail de confirmation vient de vous être envoyé.</p>
+					</div>
 					<div id="connect">
 						<a href="#concept" class="button inscription"><?php echo CONCEPT_CTA ?></a> <br>
 						<form>
@@ -93,6 +95,7 @@
 							<a href="#concept" class="button facebook connect">Facebook</a>
 						</form>
 					</div>
+
 				</div>
 			</div>
 		</article>

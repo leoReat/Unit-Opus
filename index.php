@@ -109,7 +109,7 @@
 						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" title="pictogramme téléphone"/> 06.70.28.61.80</li>
 						<li><img src="<?php echo $urlBASE; ?>images/map.png" alt="logo telephone" title="pictogramme carte"/> OPUS<br>
 						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
-						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" /> <a href="mailto:contact@get-opus.fr">contact@get-opus.fr</a></li>
+						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" title="pictogramme mail"/> <a href="mailto:contact@get-opus.fr">contact@get-opus.fr</a></li>
 					</ul>
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus" title="redirection facebook"/></a></li>
@@ -117,18 +117,18 @@
 						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus" title="redirection instagram"/></a></li>
 						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
 						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" /></a></li>
+						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li>
 					</ul>
 				</div>
 				
-				<form action="" method="POST">
+				<form action="#" method="POST">
 					<input type="text" name="" placeholder="Nom">
 					<input type="mail" name="" placeholder="Adresse mail">
 					<textarea placeholder="Message"></textarea>
 					<button type="submit" class="button">Envoyer</button>
 				</form>
 			</div>
-			<button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" /></button>
+			<button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="retour en haut"/></button>
 		</article>
 	</section>
 

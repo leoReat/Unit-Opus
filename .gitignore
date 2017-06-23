@@ -1,2 +1,2 @@
 *.DS_Store
-assets/config.php
+/assets/config.php

@@ -49,7 +49,7 @@
 <body>
 	<header>
 		<nav>
-			<a href="#presentation" class="home no-mobile"><img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo" /></a>
+			<h1><a href="#presentation" class="home no-mobile"><img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo" /></a></h1>
 			<ul class="navigation">
 				<li class="active"><a href="#presentation"><?php echo ACCUEIL; ?></a></li>
 				<li><a href="#concept"><?php echo CONCEPT; ?></a></li>
@@ -104,7 +104,7 @@
 		<article id="contact">
 			<div class="content center">
 				<div class="contact-left">
-					<h1><?php echo CONTACT_TITRE; ?></h1>
+					<h2><?php echo CONTACT_TITRE; ?></h2>
 					<p><?php echo CONTACT_TEXTE; ?></p>
 					<ul>
 						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" /> 06.70.28.61.80</li>
@@ -141,7 +141,7 @@
 	<div class="overlay"></div>
 	<div class="modal">
 		<button class="close">x</button>
-		<h1><?php echo MENTIONS_TITRE; ?></h1>
+		<h2><?php echo MENTIONS_TITRE; ?></h2>
 		<p><?php echo MENTIONS_TEXTE; ?></p>
 	</div>
 		

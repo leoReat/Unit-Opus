@@ -89,6 +89,8 @@
 						<a href="#concept" class="button inscription"><?php echo CONCEPT_CTA ?></a> <br>
 						<form>
 							<input type="text" name="" placeholder="Adresse mail">
+							<input type="hidden" name="pro" value="<?php echo $pro; ?>">
+
 							<button>OK</button>
 							<p>OU</p>
 							<a href="#concept" class="button google connect">Google</a>
@@ -121,7 +123,12 @@
 					</ul>
 				</div>
 				
-				<?php require_once("assets/contact_pro.html"); ?>
+				<form action="" method="POST">
+					<input type="text" name="" placeholder="Nom">
+					<input type="mail" name="" placeholder="Adresse mail">
+					<textarea placeholder="Message"></textarea>
+					<button type="submit" class="button">Envoyer</button>
+				</form>
 			</div>
 		</article>
 	</section>

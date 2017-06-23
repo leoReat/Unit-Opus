@@ -18,13 +18,13 @@ $("#concept #connect .inscription").click(function(e){
 });
 
 function newMail(datas){
-	$.post("assets/newsletter.php", datas).done(function( data ) {
-		console.log(data);
-		if(data == 2){
-			$("#connect").hide();
-			$("#thanks").fadeIn();
-		}
-	});
+	// $.post("assets/newsletter.php", datas).done(function( data ) {
+	// 	console.log(data);
+	// 	if(data == 2){
+	// 		$("#connect").hide();
+	// 		$("#thanks").fadeIn();
+	// 	}
+	// });
 }
 
 $("#connect form").submit(function(e){

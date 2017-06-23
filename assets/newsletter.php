@@ -1,12 +1,12 @@
 <?php
 ini_set('display_errors',1);
 
-$mailTo = "contact@get-opus.fr";
+$mailTo = $_POST['mailTo'];
 
 require_once('Mailin.php');
 $mailin = new Mailin("https://api.sendinblue.com/v2.0","bg8knMtwrWDzP3f6");
 $data = array( "email" => $mailTo,
-    "attributes" => array("NOM"=>"Thomas Deroua !"),
+    "attributes" => array("NOM"=> $_POST['nom']),
     "listid" => array(7),
 );
 

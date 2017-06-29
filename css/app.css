@@ -182,21 +182,22 @@ select.lang{
 }
 nav.bottom{
 	padding:0;
+	padding-top:4px;
 	font-size:0;
 	bottom:0;
+	background:#fff;
 }
 nav ul li{
 	display:inline-block;
 	width:calc(100% / 3);
 	position:relative;
-	padding-top:4px;
-	box-sizing:border-box;
 }
 nav.bottom ul li a{
 	font-size:20px;
 	display:inline-block;
 	width:100%;
-	background:red;
+	background:#fff;
+	color:blue;
 	padding:20px 0;
 	margin-bottom:0;
 	text-align:center;
@@ -205,11 +206,15 @@ nav.bottom ul:before{
 	content:"";
 	position:absolute;
 	height:4px;
-	background:#fff;
+	background:blue;
 	top:0;
 	left:0;
 	width:calc(100% / 3);
+	transition:left ease 0.3s;
 }
+nav.bottom ul.actif-1:before{left:0;}
+nav.bottom ul.actif-2:before{left:calc(100% / 3);}
+nav.bottom ul.actif-3:before{left:calc(100% / 3 * 2);}
 
 
 

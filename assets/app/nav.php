@@ -9,6 +9,7 @@
     $("nav ul li a").click(function(e){
         e.preventDefault();
         var pourcentage = $(this).parent().index();
-        $("nav ul:before").css("left", "calc(100% / 3 * "+pourcentage+" );")
+        $("nav ul").removeClass();
+        $("nav ul").addClass("actif-"+(pourcentage+1));
     });
 </script>

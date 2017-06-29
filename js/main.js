@@ -12,17 +12,11 @@ firebase.initializeApp(config);
 var google = new firebase.auth.GoogleAuthProvider();
 var facebook = new firebase.auth.FacebookAuthProvider();
 
-$("#concept #connect .inscription").click(function(e){
-	e.preventDefault();
-	$("#concept #connect").addClass("actif");
-	$("#concept #connect input").focus();
-});
 
 function newMail(datas){
 	var pro = $("form input[name='pro']").val();
 	datas["id"] = (pro == "_pro") ? 8 : 7;
 	$.post("assets/newsletter.php", datas).done(function( data ) {
-		console.log(data);
 		if(data == 2){
 			$("#connect").hide();
 			$("#thanks").fadeIn();
@@ -40,14 +34,12 @@ $("#connect form").submit(function(e){
 
 $(".button.connect").click(function(e){
 	e.preventDefault();
-	if(!$(this).closest("#connect").hasClass("actif")) return;
-	
 
 	var provider = $(this).hasClass("facebook") ? facebook : google;
 	firebase.auth().signInWithPopup(provider).then(function(result) {
 		datas = {mailTo:result.user.email, nom:result.user.displayName};
 		newMail(datas);
-			
+
 	}).catch(function(error) {
 		console.log(error)
 	});
@@ -55,7 +47,7 @@ $(".button.connect").click(function(e){
 
 firebase.auth().onAuthStateChanged(function(user) {
 	// Si l'utilisateur est déjà connecté, on ne lui propose pas de s'inscrire à la newsletter
-	if (user) $("#connect").fadeOut();
+	// if (user) $("#connect").hide();
 });
 
 
@@ -75,26 +67,25 @@ $("header nav .home, header nav ul.navigation li a, a.scroll, button.scroll, .sc
 
 $(document).scroll(function(){
 	var navHeight = ($(window).width() < 800) ? 0 : $("header").height();
-	// var heightStrates = $(window).height() - navHeight - 2;
-	// var index = Math.ceil($(window).scrollTop() / heightStrates) - 1;
-	// if(index < 0) index = 0;
-	// if() index = 2;
 
 	var index = 0;
 	var pro = $("form input[name='pro']").val();
-	var concept = (pro == "_pro") ? $("#assurance").offset().top : $("#concept").offset().top;
+	var concept = (pro == "_pro") ? $("#assurance").offset().top : $("#assurance").offset().top;
 	if($(window).scrollTop() >= (concept - navHeight)){
 		index = 1;
 		if($(window).width() > 799) $(".scroll-top").fadeIn();
-	}	
+	}
 	else if($(window).width() > 799) $(".scroll-top").fadeOut();
 
 	if($(window).scrollTop() >= ($("#contact").offset().top - navHeight)
 		|| ($(window).scrollTop() + $(window).height()) >= $(document).height()) index = 2;
 
 	if($(window).width() > 799){
-		var parallax = ($(window).scrollTop() - $("#concept").offset().top) / 7;
-		$("#concept img.center").css("margin-top", - parallax )
+		$(".concept .iPhone").each(function(){
+			var parallax = ($(window).scrollTop() - $(this).closest(".concept").offset().top) / 7;
+			$(this).css("margin-top", - parallax )
+		});
+
 	}
 
 
@@ -129,3 +120,20 @@ $("#contact form").submit(function(e){
 	});
 });
 
+function resizeAssurance(){
+	var height = $("#assurance .content div:nth-of-type(3)").outerHeight();
+	$("#assurance .content div:nth-of-type(-n+2)").css("height", height);
+}
+
+$(window).resize(function(){
+	resizeAssurance();
+});
+$(document).ready(function(){
+	resizeAssurance();
+});
+
+
+// Gestion des langues
+$("select.lang").change(function(){
+	$("header nav form").submit();
+});

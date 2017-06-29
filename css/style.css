@@ -1,13 +1,13 @@
 /* Reset CSS */
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, 
-	big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
-	dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
-	canvas, details, embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, 
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+	big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+	dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time,
 	mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
 
 
 /* Reset pour les vieux navigateurs */
-	article, aside, details, figcaption, figure, 
+	article, aside, details, figcaption, figure,
 	footer, header, hgroup, menu, nav, section {display: block;}
 	body {line-height: 1;}
 	ol, ul {list-style: none;}
@@ -30,7 +30,7 @@
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #292929;
+	background-color: #373737;
 }*/
 
 
@@ -84,7 +84,7 @@ header nav ul li a{
 	text-transform:uppercase;
 	text-decoration:none;
 	font-weight:600;
-	color:#292929;
+	color:#373737;
 	letter-spacing:1px;
 	font-size:15px;
 }
@@ -97,12 +97,23 @@ header nav ul.navigation li a{
 header nav ul.navigation li.active a{
 	color:#1007d1;
 }
-header nav ul#flag li a{
-	padding:37px 3px;
-}
-header nav ul#flag li a img{
-	height:15px;
-	width: 26px;
+
+
+select.lang{
+	margin: 33px 0;
+    border: 1px solid #cdcccc;
+    -webkit-appearance: none;
+    padding: 5px 14px;
+	border-radius:3px;
+	text-transform:uppercase;
+	font-family:"Assistant", sans-serif;
+	font-weight:700;
+	font-size:10px;
+	letter-spacing:1px;
+	background:#fff url(../images/arrow-black.svg) no-repeat center right 10px;
+	background-size:10px;
+	padding-right:26px;
+	cursor:pointer;
 }
 
 .content{
@@ -146,6 +157,13 @@ section article{
 #presentation img:first-of-type,
 #stone2{
 	width: 100%;
+}
+#presentation div.center a.button img{
+    width: 10px;
+    transform: rotate(90deg);
+    position: relative;
+    top: 2px;
+    left: 5px;
 }
 #hdroit {
 	position: absolute;
@@ -214,7 +232,7 @@ div.center p{
 div.center p strong{
 	font-weight:600;
 }
-div.center a.button, button.button{
+.button, button.button{
 	text-decoration:none;
 	color:#1007d1;
 	background:#fff;
@@ -227,118 +245,89 @@ div.center a.button, button.button{
 	margin-top:40px;
 	transition:all ease 0.3s;
 }
-div.center a.button:active, button.button:active,
-div.center a.button:focus, button.button:focus{
-	box-shadow:none;
-}
-#concept{
-	background:#fdfcfc;
-}
 
-button.scroll.arrow{
-	width:25px;
-	height:25px;
-	background:none;
-	border:none;
-	outline:none;
+.concept{
+	background:url(../images/concept1.jpg) no-repeat;
+	background-size:cover;
+	text-align:right;
+}
+.concept .content{
+	height:100%;
+	position:relative;
+}
+.concept .iPhone{
+    height: calc(100% - 100px);
+    padding-top:50px;
+    position:relative;
+    display:inline-block;
+    width:auto;
+}
+.concept .iPhone img{
+	height:100%;
+	position:relative;
+}
+.concept .iPhone .screen{
+    position: absolute;
+    width: calc(100% - 20px);
+    height: calc(100% - 140px);
+    left: 10px;
+    bottom: 40px;
+    overflow: hidden;
+}
+.concept .iPhone .screen:before{
+	content:"";
 	position:absolute;
-	bottom:30px;
-	left:calc(50%);
-	transform:translateX(-50%) rotate(90deg);
-	padding:0;
-	cursor:pointer;
-}
-button.scroll.arrow img{
 	width:100%;
+	height:100%;
+	background:url(../images/joconde.jpg) no-repeat center center;
+	background-size:cover;
+	left:0;
+	top:0;
+	transition:transform ease 0.5s;
 }
-
-#concept img.center{
-	height:90%;
-	width:auto;
+.concept .iPhone:hover .screen:before{
+	transform:scale(1.15);
 }
-#concept div.center{
-	color:#28292B;
-	width:40%;
-	left:50%;
+.concept div.center{
+	color:#fff;
+	width:55%;
+	left:auto;
+	text-align:left;
 }
-#concept div.center a{
+.concept div.center a{
 	background:#1007d1;
 	color:#fff;
 }
-#concept #connect{
-	max-width:300px;
-	min-height:110px;
-	position:relative;
-	margin-top:45px;
+
+.concept#concept2{
+	background:#fdfcfc;
 }
-#concept #connect input,
-#concept #connect button{
-   
-    border: none;
-    padding: 13px 17px;
-    border-radius: 5px 0 0 5px;
-    box-sizing: border-box;
-    font-size: 13px;
-    letter-spacing: 1px;
-    width:calc(100% - 60px);
-    outline:none;
+.concept#concept2 div.center{
+	color:#373737;
+	left:40%;
 }
-#concept #connect button{
-	width:60px;
-	position: absolute;
-	right:0;
-	top:0;
-    background: #0bdbfa;
-    border-radius: 0 5Px 5px 0;
-    font-size: 14px;
-    color:#fff;
-    cursor:pointer;
+.concept#concept2 .iPhone .screen:before{
+	background-image:url(../images/tableau2.jpg)
 }
-#concept div.center a:not(.connect){
-	margin-top:0;
-	box-sizing:border-box;
-	width:100%;
-	background:#0bdbfa;
+.concept#concept3 .iPhone .screen:before{
+	background-image:url(../images/tableau3.jpg)
 }
-#concept #connect a.connect{
-	transition:all ease 1s 0.6s;
-	opacity:0;
-	cursor:default;
-	margin-top:20px;
-	background:#0bdbfa;
-}
-#concept #connect a.connect:nth-of-type(1){
-    margin-right: 8px;
-}
-#concept #connect.actif a.connect{
-	opacity:1;
-	cursor:pointer;
-}
-#concept #connect form{
-	width:0;
-	overflow:hidden;
-	position:absolute;
-	z-index:2;
-	left:0;
-	top:0;
-	transition: width ease-in-out 0.5s, padding linear 0.3s;
+.concept#concept2 .content{
 	text-align:left;
 }
-#concept #connect.actif form{
-	width:100%;
+.concept#concept3{
+	background-image:url(../images/concept3.jpg);
 }
-#concept #connect p{
-	margin: 0;
-    text-align: center;
-    opacity:0;
-    transition:all ease 0.6s 0.4s;
-}
-#concept #connect.actif p{
-    opacity:1;
-}
+
+
+
+
 #contact{
 	background:#28292b;
 	margin-bottom:65px;
+	height:auto;
+	padding:70px 0;
+	text-align:center;
 }
 #contact div.center{
 	left:auto;
@@ -350,21 +339,22 @@ button.scroll.arrow img{
 #contact .content.center{
 	width:80%;
 	max-width:960px;
-	left:50%;
-	transform:translate(-50%, -50%);
+	/*left:50%;*/
+	/*transform:translate(-50%, -50%);*/
 	font-size:0;
+	position:static;
+	transform:none;
 }
 
 #contact .content.center .contact-left{
 	display:inline-block;
 	vertical-align:top;
-}
-
-#contact .content.center .contact-left{
-	width:45%;
+	/*width:45%;*/
 	font-size:15px;
 }
-
+#contact .content.center .contact-left h2{
+	margin-bottom:20px;
+}
 #contact .content.center .contact-left li{
     margin: 25px 0;
     line-height: 22px;
@@ -476,10 +466,10 @@ button.close{
 }
 
 form{
+    display: inline-block;
 	text-align:right;
 }
 #contact form{
-    display: inline-block;
     vertical-align: top;
     width:45%;
     margin-left:5%;
@@ -493,6 +483,14 @@ form{
 }
 #thanks{
 	display:none;
+	color:#000;
+	margin-top:40px;
+	text-align:center;
+}
+#thanks p{
+    border: 1px solid #01eb02;
+    color: #01eb02;
+    font-weight: 600;
 }
 form input, form textarea{
 	box-sizing: border-box;
@@ -612,25 +610,121 @@ form button.button{
 	padding:90px 0;
 	background:#fff;
 	height:auto;
-	box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2);
-	z-index:1;
 }
-#assurance div{
-	width:calc(100% / 3 - 100px);
+#assurance .content div.box{
+	width:calc(100% / 3 - 30px);
 	display:inline-block;
 	text-align:center;
 	font-size:19px;
 	letter-spacing:1px;
-	margin:0 50px;
 	vertical-align: top;
+	color:#373737;
+	box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.1);
+	box-sizing:border-box;
+	padding:45px;
 }
-#assurance div img{
-	margin-bottom:20px;
+#assurance .content div img{
 	width:70px;
 }
+#assurance .content div:nth-of-type(2),
+#assurance .content div:nth-of-type(5){
+	margin:0 45px;
+}
+#assurance .content div.see-more{
+	box-shadow:none;
+	padding:0;
+}
 
+#assurance .content div h2, #assurance .content div p{
+	text-align:left;
+	margin-top:20px;
+}
+#assurance .content div h2{
+	font-weight:600;
+	font-size:17px;
+}
+#assurance .content div h2:after{
+	content:"";
+	display:block;
+	width:30px;
+	height:3px;
+	margin-top:10px;
+	background:#373737;
+}
+#assurance .content div p{
+	font-size:16px;
+	font-weight:500;
+}
+#assurance .content a.button{
+	font-size:15px;
+	background:#1308f9;
+	color:#fff;
+	padding:10px 20px;
+}
+#assurance .content div#connect{
+	width:100%;
+	margin-top:40px;
+	letter-spacing:0;
+	font-size:0;
+}
+#assurance .content div#connect h2{
+	margin-top:0;
+}
+#assurance .content div#connect a,
+#assurance .content div#connect form{
+	width:calc(100% / 3 - 10px);
+	display:inline-block;
+	vertical-align:top;
+	box-sizing: border-box;
+	position:relative;
+	margin-right:15px;
+    margin-top: 20px;
+}
+#assurance .content div#connect a{
+	background:#5a76b1;
+	border-color:#5a76b1;
+	color:#fff;
+}
+#assurance .content div#connect a.google{
+	background:#e85c62;
+	border-color:#e85c62;
+}
+#assurance .content div#connect form{
+	text-align:left;
+	margin-right:0;
+}
 
+#assurance .content div#connect input,
+#assurance .content div#connect button{
+    border: 1px solid #cdcccc;
+    border-right:none;
+    padding: 9px 17px;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width:calc(100% - 60px);
+    outline:none;
+    margin:0;
+    color:#646464;
+}
 
-
-
-
+#assurance .content div#connect button{
+	width:60px;
+	position: absolute;
+	right:0;
+	top:0;
+    background: #0bdbfa;
+    border-radius: 0 5Px 5px 0;
+    font-size: 15px;
+    color:#fff;
+    cursor:pointer;
+    border: 1px solid #cdcccc;
+    border-left:none;
+    padding: 9px;
+    font-weight:600;
+    transition:all ease 0.3s;
+}
+#assurance .content div#connect button:hover{
+	border-color:#0bdbfa;
+}

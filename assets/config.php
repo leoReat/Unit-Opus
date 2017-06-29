@@ -15,5 +15,5 @@
 	$pro = (isset($_GET["pro"])) ? "_pro" : "";
 	require_once("lang/".$lang.".lang.php");
 
-	$urlBASE = "";
+	$urlBASE = "/";
 	$urlAPP = $urlBASE."app.php?page=";

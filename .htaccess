@@ -1,19 +1,5 @@
 #Liste des erreurs courantes.
 
-ErrorDocument 400 /index.php
-ErrorDocument 401 /index.php
-ErrorDocument 402 /index.php
-ErrorDocument 403 /index.php
-ErrorDocument 404 /index.php
-ErrorDocument 405 /index.php
-ErrorDocument 500 /index.php
-ErrorDocument 501 /index.php
-ErrorDocument 502 /index.php
-ErrorDocument 503 /index.php
-ErrorDocument 504 /index.php
-ErrorDocument 505 /index.php
-
-
 # Le serveur doit suivre les liens symboliques :
 Options +FollowSymlinks
 
@@ -23,6 +9,22 @@ RewriteEngine on
 # Empêcher les boucles infinies
 RewriteCond %{ENV:REDIRECT_STATUS} 200
 RewriteRule ^ - [L]
+
+RewriteCond %{THE_REQUEST} ^.*/index\.php
+RewriteRule ^(.*)index.php(.*)$ /$1 [R=301,L] 
+
+ErrorDocument 400 /erreur.php
+ErrorDocument 401 /erreur.php
+ErrorDocument 402 /erreur.php
+ErrorDocument 403 /erreur.php
+ErrorDocument 404 /erreur.php
+ErrorDocument 405 /erreur.php
+ErrorDocument 500 /erreur.php
+ErrorDocument 501 /erreur.php
+ErrorDocument 502 /erreur.php
+ErrorDocument 503 /erreur.php
+ErrorDocument 504 /erreur.php
+ErrorDocument 505 /erreur.php
 
 #--------------------------------------------------
 # Règles de réécriture d'URL :

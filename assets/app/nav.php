@@ -8,8 +8,12 @@
 <script type="text/javascript">
     $("nav ul li a").click(function(e){
         e.preventDefault();
-        var pourcentage = $(this).parent().index();
+        var menuActif = $(this).parent().index() + 1;
         $("nav ul").removeClass();
-        $("nav ul").addClass("actif-"+(pourcentage+1));
+        $("nav ul").addClass("actif-"+menuActif);
+
+        if(menuActif == 1){
+            console.log("hey !")
+        }
     });
 </script>

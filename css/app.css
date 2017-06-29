@@ -331,3 +331,28 @@ input.button::-ms-input-placeholder { /* Microsoft Edge */
 	left: 3.5vh;
 	top: 3.5vh;
 }
+
+.loader {
+	height:200px;
+    position:absolute;
+    top:calc(50% - 20px - 32px); /* Moitié de la hauteur + moitié du menu */
+    left:calc(50% - 20px);
+    display:inline-block;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    border-right-color:blue;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 0.8s linear infinite;
+    animation: spin 0.8s linear infinite;
+    z-index:3;
+	display:none;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

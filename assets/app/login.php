@@ -26,7 +26,7 @@ $("form").submit(function(e){
 			for(var id in snapshot.val()){
 				var user = snapshot.val()[id];
 				$.post("assets/md5.php", { mdp: mdp, confirm:user.mdp, pseudo:user.username, level:1 }).done(function( data ) {
-					console.log(data)
+					window.location = "app.php?page=login";
 				});
 			}
 		}

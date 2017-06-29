@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="<?php echo $urlBASE; ?>css/medias.css" type="text/css" />
 	<link rel="icon" type="image/png" href="<?php echo $urlBASE; ?>images/favicon.png" />
-	
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Opus, musée, digital">
 	<meta name="description" content="Opus est une solution innovante de digitalisation des musées et galeries." />
@@ -53,19 +53,16 @@
 
 			<ul class="navigation">
 				<li class="active"><a href="#presentation"><?php echo ACCUEIL; ?></a></li>
-				<li><a href="#concept"><?php echo CONCEPT; ?></a></li>
+				<li><a href="#assurance"><?php echo CONCEPT; ?></a></li>
 				<li><a href="#contact"><?php echo CONTACT; ?></a></li>
 			</ul>
-			<ul id="flag">
-				<?php 
-					$noMobileFr = ($lang == "fr") ? "no-mobile" : "";
-					$noMobileEn = ($lang == "en") ? "no-mobile" : "";
-
-					$urlPro = (isset($_GET["pro"])) ? "/pro" : "";
-				?>
-				<li class="<?php echo $noMobileFr; ?>"><a href="<?php echo $urlPro; ?>/fr"><img src="<?php echo $urlBASE; ?>images/francais.png" alt="français" title="redirection page français"/></a></li>
-				<li class="<?php echo $noMobileEn; ?>"><a href="<?php echo $urlPro; ?>/en"><img src="<?php echo $urlBASE; ?>images/english.png" alt="english" title="redirection page anglais"/></a></li>
-			</ul>
+			<form method="POST">
+				<select class="lang" name="lang">
+					<option value="fr"<?php echo ($lang == "fr") ? " selected" : ""; ?>>Français</option>
+					<option value="en"<?php echo ($lang == "en") ? " selected" : ""; ?>>Anglais</option>
+					<option value="it"<?php echo ($lang == "it") ? " selected" : ""; ?>>Italien</option>
+				</select>
+			</form>
 		</nav>
 	</header>
 	<section>
@@ -75,28 +72,83 @@
 			require_once("assets/presentation".$pro.".html")
 		?>
 
-		<article id="concept">
+		<article id="assurance">
 			<div class="content">
-				<img src="<?php echo $urlBASE; ?>images/iphone.png" class="center" alt="mockup opus" title="visuelle télephone opus"/>
+				<div class="box">
+					<img src="<?php echo $urlBASE; ?>images/boost.png" alt="Opus booste vos ventes"/>
+					<h2>Capturez vos oeuvres</h2>
+					<p>Vos sélections dans votre salon en 2 clics.</p>
+				</div>
+				<div class="box">
+					<img src="<?php echo $urlBASE; ?>images/gamme.png" alt=""/>
+					<h2>Une application polyglotte</h2>
+					<p>Une présentation des oeuvres dans votre langue en un flash.</p>
+				</div>
+				<div class="box">
+					<img src="<?php echo $urlBASE; ?>images/stock.png" alt=""/>
+					<h2>La fin des files d’attente</h2>
+					<p>Des achats depuis votre téléphone sans passer par la boutique.</p>
+				</div>
+
+				<div class="box see-more"><a href="#concept" title="Découvrir le concept" class="button scroll">En savoir plus</a></div>
+				<div class="box see-more"><a href="#concept2" title="Changez de langue simplement" class="button scroll">En savoir plus</a></div>
+				<div class="box see-more"><a href="#concept3" title="Découvrez notre application" class="button scroll">En savoir plus</a></div>
+
+				<div id="thanks">
+					<p class=button>On se retrouve rapidement !</p>
+				</div>
+				<div id="connect" class="box">
+					<h2>Restez informé</h2>
+					<a href="#concept" class="button facebook connect">S'inscrire avec Facebook</a>
+					<a href="#concept" class="button google connect">S'inscrire avec Google</a>
+					<form>
+						<input type="text" name="email" placeholder="Adresse mail">
+						<input type="hidden" name="pro" value="<?php echo $pro; ?>">
+						<button type="submit">OK</button>
+					</form>
+				</div>
+
+			</div>
+		</article>
+
+		<article id="concept" class="concept">
+			<div class="content">
+				<div class="iPhone">
+					<div class="screen"></div>
+					<img src="<?php echo $urlBASE; ?>images/iphone.png" alt="mockup opus" title="visuelle télephone opus"/>
+				</div>
 				<div class="center">
 				<?php
-					require_once("assets/concept".$pro.".html")
+					require("assets/concept".$pro.".html")
 				?>
-					<div id="thanks">
-						<p>Merci pour votre confiance ! Un e-mail de confirmation vient de vous être envoyé.</p>
-					</div>
-					<div id="connect">
-						<a href="#concept" class="button inscription"><?php echo CONCEPT_CTA ?></a> <br>
-						<form>
-							<input type="text" name="email" placeholder="Adresse mail">
-							<input type="hidden" name="pro" value="<?php echo $pro; ?>">
-							<button>OK</button>
-							<p>OU</p>
-							<p><a href="#concept" class="button google connect">Google</a>
-							<a href="#concept" class="button facebook connect">Facebook</a></p>
-						</form>
-					</div>
+				</div>
+			</div>
+		</article>
 
+		<article id="concept2" class="concept">
+			<div class="content">
+				<div class="iPhone">
+					<div class="screen"></div>
+					<img src="<?php echo $urlBASE; ?>images/iphone.png" alt="mockup opus" title="visuelle télephone opus"/>
+				</div>
+				<div class="center">
+				<?php
+					require("assets/concept2".$pro.".html")
+				?>
+				</div>
+			</div>
+		</article>
+
+		<article id="concept3" class="concept">
+			<div class="content">
+				<div class="iPhone">
+					<div class="screen"></div>
+					<img src="<?php echo $urlBASE; ?>images/iphone.png" alt="mockup opus" title="visuelle télephone opus"/>
+				</div>
+				<div class="center">
+				<?php
+					require("assets/concept3".$pro.".html")
+				?>
 				</div>
 			</div>
 		</article>
@@ -105,13 +157,13 @@
 			<div class="content center">
 				<div class="contact-left">
 					<h2><?php echo CONTACT_TITRE; ?></h2>
-					<p><?php echo CONTACT_TEXTE; ?></p>
-					<ul>
+					<!-- <p><?php echo CONTACT_TEXTE; ?></p> -->
+					<!-- <ul>
 						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" title="pictogramme téléphone"/> 06.70.28.61.80</li>
 						<li><img src="<?php echo $urlBASE; ?>images/map.png" alt="logo telephone" title="pictogramme carte"/> OPUS<br>
 						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
 						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" title="pictogramme mail"/> <a href="mailto:contact@get-opus.fr">contact@get-opus.fr</a></li>
-					</ul>
+					</ul> -->
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus" title="redirection facebook"/></a></li>
 						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png" alt="lien twitter opus" title="redirection twitter"/></a></li>
@@ -121,13 +173,13 @@
 						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li>
 					</ul>
 				</div>
-				
-				<form action="#" method="POST">
+
+			<!-- 	<form action="#" method="POST">
 					<input type="text" name="nom" placeholder="Nom">
 					<input type="email" name="mail" placeholder="Adresse mail">
 					<textarea placeholder="Message"></textarea>
 					<button type="submit" class="button">Envoyer</button>
-				</form>
+				</form> -->
 			</div>
 			<button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="retour en haut"/></button>
 		</article>
@@ -146,22 +198,22 @@
 		<h2><?php echo MENTIONS_TITRE; ?></h2>
 		<p><?php echo MENTIONS_TEXTE; ?></p>
 	</div>
-		
+
     <!-- COOKIES -->
     <div id="cookies"></div>
     <script src="<?php echo $urlBASE; ?>js/cookiechoices.js"></script>
     <script>document.addEventListener('DOMContentLoaded',
             function(event){
         cookieChoices.showCookieConsentBar('<?php echo COOKIES; ?>', '<?php echo COOKIES_AGREE; ?>', '<?php echo COOKIES_LEARN; ?>', "http://get-opus.fr", '<?php echo COOKIES2; ?>');
-              
-                $("footer p:nth-of-type(2) a, .overlay, button.close, #cookieChoiceInfo a:nth-of-type(1)").click(function(e){
-                    e.preventDefault();
-                    $(".modal, .overlay").fadeToggle(300);
-                    $("body").toggleClass("no-scroll");
-                });
+
+            $("footer p:nth-of-type(2) a, .overlay, button.close, #cookieChoiceInfo a:nth-of-type(1)").click(function(e){
+                e.preventDefault();
+                $(".modal, .overlay").fadeToggle(300);
+                $("body").toggleClass("no-scroll");
+            });
     });
     </script>
-		
+
 	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 	<script src="<?php echo $urlBASE; ?>js/main.js"></script>
 

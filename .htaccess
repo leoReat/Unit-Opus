@@ -35,3 +35,5 @@ RewriteRule /?(pro)$ /index.php?pro [L]
 # On remplace /en ou /fr par index.php?lang=en
 RewriteRule /?(en|fr)$ /index.php?lang=$1 [L]
 
+# Gestion des pages de l'appli
+RewriteRule /?(login|register)$ /app.php?page=$1 [L]

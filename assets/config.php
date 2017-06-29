@@ -7,7 +7,7 @@
 	else $selectedLang = "fr";
 
 	if($selectedLang == "it") $lang = "it";
-	if($selectedLang == "en") $lang = "en";
+	else if($selectedLang == "en") $lang = "en";
 	else $lang = "fr";
 
 	$_SESSION['lang'] = $lang;

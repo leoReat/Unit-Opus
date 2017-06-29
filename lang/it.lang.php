@@ -3,7 +3,7 @@
 	define("CONCEPT","Concept");
 	define("CONTACT","Contact");
 
-	define("PRESENTATION_TITRE", "Découvrez, capturez, recevez.");
+	define("PRESENTATION_TITRE", "Découvro, capturo, recevo.");
 	define("PRO_PRESENTATION_TITRE", "Opus, l’application qui digitalise vos points de vente.");
 	define("PRESENTATION_TEXTE", "<strong>Opus</strong>, l'application qui achemine vos oeuvres d'art préférées jusqu'à chez vous !");
 	define("PRESENTATION_CTA", "Découvrir");

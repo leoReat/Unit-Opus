@@ -11,7 +11,7 @@ RewriteCond %{ENV:REDIRECT_STATUS} 200
 RewriteRule ^ - [L]
 
 RewriteCond %{THE_REQUEST} ^.*/index\.php
-RewriteRule ^(.*)index.php(.*)$ /$1 [R=301,L] 
+RewriteRule ^(.*)index.php(.*)$ /$1 [R=301,L]
 
 ErrorDocument 400 /erreur.php
 ErrorDocument 401 /erreur.php
@@ -31,11 +31,11 @@ ErrorDocument 505 /erreur.php
 #--------------------------------------------------
 
 # On remplace /pro par index.php?pro
-RewriteRule /?pro/?(en|fr)$ /index.php?lang=$1&pro [L]
+RewriteRule /?pro/?(en|fr|it)$ /index.php?lang=$1&pro [L]
 RewriteRule /?(pro)$ /index.php?pro [L]
 
 # On remplace /en ou /fr par index.php?lang=en
-RewriteRule /?(en|fr)$ /index.php?lang=$1 [L]
+RewriteRule /?(en|fr|it)$ /index.php?lang=$1 [L]
 
 # Gestion des pages de l'appli
 RewriteRule /?(login|register)$ /app.php?page=$1 [L]

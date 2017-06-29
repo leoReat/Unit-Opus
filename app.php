@@ -20,6 +20,12 @@
 			$class = "home app";
 		break;
 
+		case 'profil':
+			redirectIfConnect(false);
+			$fichier = "profil";
+			$class = "home app";
+		break;
+
 		case 'login':
 			redirectIfConnect(true);
 			$fichier = "login";
@@ -31,6 +37,8 @@
 			$fichier = "register";
 			$class = "home register";
 		break;
+
+
 
 		default:
 			redirectIfConnect(true);
@@ -88,7 +96,10 @@
 	</head>
 	<body class="<?php echo $class; ?>">
 		<?php
-			if(isset($_SESSION['username'])) require_once("assets/app/header.php");
+			if(isset($_SESSION['username'])){
+				require_once("assets/app/header.php");
+				echo '<div class="loader"></div>';
+			}
 
 			require_once("assets/app/".$fichier.".php");
 

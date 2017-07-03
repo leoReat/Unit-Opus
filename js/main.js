@@ -121,6 +121,7 @@ $("#contact form").submit(function(e){
 });
 
 function resizeAssurance(){
+	if($(window).width() < 800)) return;
 	var height = $("#assurance .content div:nth-of-type(3)").outerHeight();
 	$("#assurance .content div:nth-of-type(-n+2)").css("height", height);
 }

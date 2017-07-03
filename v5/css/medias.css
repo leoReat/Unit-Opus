@@ -1,0 +1,203 @@
+/* MOBILE */
+@media screen and (max-width: 800px) {
+	.no-mobile{
+		display:none;
+	}
+
+	#presentation div.center,
+	#concept div.center,
+	div.center,
+	.center,
+	#contact .content.center,
+	#contact .content.center .contact-left{
+		width:100%;
+		position:static;
+		transform:none;
+	}
+
+	body{
+		padding-top:0;
+		text-align:center;
+	}
+	html, body, article, section, article{
+		height:auto;
+	}
+
+	#presentation .images{
+		position: relative;
+	    transform: none;
+	    display: block;
+	    margin: auto;
+	    width: 50%;
+	    margin-bottom:20px;
+	}
+	.content,
+	#contact .content.center div.chat p{
+		width:100%;
+	}
+	header{
+		text-align:center;
+	}
+	header nav{
+		width:100%;
+		padding: 20px 0;
+	}
+	/*header nav ul,
+	header nav ul.navigation li{
+		display:block;
+	}*/
+	header nav a img#logo,
+	#contact .content.center div.chat a{
+		position:static;
+		transform:none;
+	}
+
+	header nav ul.navigation li a,
+	header nav ul#flag li a,
+	header nav a img#logo{
+		padding:10px;
+	}
+
+	header{
+		top:auto;
+		bottom:0;
+	}
+
+	div.center a.button, button.button{
+		margin-top:0;
+		margin-bottom:20px;
+	}
+
+	article{
+		padding: 20px;
+	}
+
+	div.center h1{
+		font-size: 30px;
+    	margin-top: 10px;
+	}
+
+	div.center p{
+		margin: 20px 0;
+	}
+
+	#concept img.center{
+		height:auto;
+		width:100%;
+	}
+
+	#concept div.center p{
+		margin-top:0;
+	}
+
+	form, #thanks{
+	    display: block;
+	    margin: auto;
+	    width: 100%;
+	    margin-top: 30px;
+	}
+	#thanks{
+		display:none;
+	}
+	button.button{
+		margin-top:20px;
+	}
+
+	header nav,
+	header nav ul.navigation{
+		font-size:0;
+	}
+
+	header nav ul.navigation li a,
+	header nav ul#flag li a{
+		padding: 6px;
+	}
+
+	#contact .content.center .contact-left ul:not(.social) li span{
+		margin-left:0;
+	}
+	form button.button{
+		margin: auto;
+	    display: block;
+	    margin-top: 10px;
+	}
+
+	#cookies{
+		top:0;
+	}
+	#cookieChoiceInfo > div{
+		width:100%;
+		position:static;
+	}
+	#cookieChoiceInfo{
+		text-align:center;
+		margin:10px;
+	}
+	#cookieChoiceInfo p{
+		display:inline-block;
+	}
+	#cookieChoiceInfo a{
+		margin:0;
+		margin-top:10px;
+	}
+	#cookieChoiceInfo a:first-of-type{
+		margin-right:10px;
+	}
+	#cookieChoiceInfo{
+		width:auto;
+	}
+
+	#contact form{
+		width: 100%;
+		margin:10px 0;
+	}
+
+	#concept #connect{
+		max-width:none;
+	}
+	#concept #connect form{
+		margin-top:0;
+	}
+	#concept #connect{
+		min-height:150px;
+	}
+	#concept #connect a.connect{
+		padding:10px 15px;
+	}
+
+	#concept div.center a:not(.connect){
+		padding:10px;
+	}
+
+	#contact form{
+		padding-right:30px;
+	}
+
+	header nav form{
+		display:none;
+	}
+
+	#assurance .content div.see-more{
+		display:none;
+	}
+	#assurance .content div.box{
+		width:calc(100% - 40px);
+		margin:auto;
+		margin-bottom:20px;
+		padding:20px;
+	}
+	#assurance .content div h2,
+	#assurance .content div p{
+		text-align:center;
+	}
+
+	#assurance .content div h2:after{
+		margin: auto;
+		margin-top: 10px;
+	}
+	#assurance .content div#connect form,
+	#assurance .content div#connect a{
+		display:block;
+		width:100%;
+	}
+}

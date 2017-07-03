@@ -3,7 +3,7 @@
 	.no-mobile{
 		display:none;
 	}
-	
+
 	#presentation div.center,
 	#concept div.center,
 	div.center,
@@ -43,7 +43,7 @@
 		width:100%;
 		padding: 20px 0;
 	}
-	/*header nav ul, 
+	/*header nav ul,
 	header nav ul.navigation li{
 		display:block;
 	}*/
@@ -118,7 +118,7 @@
 		font-size:0;
 	}
 
-	header nav ul.navigation li a, 
+	header nav ul.navigation li a,
 	header nav ul#flag li a{
 		padding: 6px;
 	}
@@ -181,5 +181,33 @@
 
 	#contact form{
 		padding-right:30px;
+	}
+
+	header nav form{
+		display:none;
+	}
+
+	#assurance .content div.see-more{
+		display:none;
+	}
+	#assurance .content div.box{
+		width:calc(100% - 40px);
+		margin:auto;
+		margin-bottom:20px;
+		padding:20px;
+	}
+	#assurance .content div h2,
+	#assurance .content div p{
+		text-align:center;
+	}
+
+	#assurance .content div h2:after{
+		margin: auto;
+		margin-top: 10px;
+	}
+	#assurance .content div#connect form,
+	#assurance .content div#connect a{
+		display:block;
+		width:100%;
 	}
 }

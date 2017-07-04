@@ -34,32 +34,30 @@
 }*/
 
 
-html, article, section{
+html, body, article, section{
 	height:100vh;
 }
 article{
-	/*height:calc(100% - 90px);*/
 	height:100%;
 }
 
-body{
+section{
 	height:400%;
+}
+
+body{
 	font-family: "Assistant", sans-serif;
     font-size: 17px;
-    /*padding-top:90px;*/
 }
 
 header{
-	/*background:#fff;*/
 	text-align:right;
 	position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    /*box-shadow: 0 0 23px 0px rgba(0, 0, 0, 0.3);*/
 }
 header nav{
-	/*background:#fff;*/
 	margin:auto;
 	width:80%;
 	max-width:960px;
@@ -74,6 +72,9 @@ header nav a img#logo{
 	left:0;
 	top:50%;
 	transform:translateY(-50%);
+}
+.logo2{
+	display:none;
 }
 
 header nav ul,
@@ -104,7 +105,8 @@ header nav ul.navigation li.active a{
 select.lang{
 	margin: 33px 0;
     border: 1px solid #cdcccc;
-    -webkit-appearance: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
     padding: 5px 14px;
 	border-radius:3px;
 	text-transform:uppercase;
@@ -139,16 +141,8 @@ section article{
 	position: absolute;
 	top:50%;
 	transform:translateY(-50%);
-	animation: pulse 2s 1;
 }
-@keyframes pulse {
-	0% {
-		margin-left:1500px;
-	}
-	100% {
-		margin-left: 0;
-	}
-}
+
 #presentation .images:hover #bdroit{
 	bottom: 12px;
 	right: 12px;
@@ -207,13 +201,10 @@ section article{
 	transition: all ease 0.3s;
 	opacity:0.5;
 }
-.center{
-	animation:fade ease 2s;
-}
+
 div.center{
 	left: 55%;
     width: 35%;
-	animation: pulse 3s 1;
 }
 @keyframes fade{
 	0%{opacity:0;}
@@ -281,25 +272,32 @@ div.center p strong{
 	}
 }
 
-.concept{
+
+#concept{
 	background:url(../images/museum.jpg) no-repeat center;
 	background-size:cover;
 	text-align:right;
-	position:fixed;
-	width:100%;
 }
-.concept:before{
-	content:"";
-	background:url(../images/background.jpg) no-repeat;
+.concept{
+	width:100%;
+	position:fixed;
+}
+#bg1, #bg2, #bg3{
+	background:url(../images/background.jpg) no-repeat center;
 	background-size:cover;
 	position:absolute;
 	width:100%;
 	height:100%;
 	top:0;
 	left:0;
-	transition:all ease 0.5s;
+	transition:all ease 0.1s;
 }
-.concept.part2:before{
+#bg2{
+	background-image:url(../images/museum3.jpg);
+	opacity:0;
+}
+#bg3{
+	background-image:url(../images/museum2.jpg);
 	opacity:0;
 }
 .concept .content{
@@ -307,15 +305,17 @@ div.center p strong{
 	position:relative;
 }
 .concept .iPhone{
-	height: calc(100% - 200px);
-    padding-top: 100px;
+	height: calc(100% - 300px);
+    padding-top: 150px;
     position:relative;
     display:inline-block;
     width:auto;
 	position:absolute;
 	right:0;
 	transform:translateX(0);
-	transition:all 0.5s ease;
+	transition:all 0.1s ease;
+	max-height:400px;
+	min-height:200px;
 }
 
 .concept div.center{
@@ -328,30 +328,123 @@ div.center p strong{
 	background:#1007d1;
 	color:#fff;
 }
+.concept div.center.strate2,
+.concept div.center.strate3,
+.concept div.center.strate4{
+	color: #121212;
+    left: 65%;
+    width: 25%;
+	opacity:0;
+	top:40%;
+}
+.concept div.center.strate3{
+	left:10%;
+}
+div.center.strate2 p,
+div.center.strate3 p,
+div.center.strate4 p{
+	font-size:12px;
+	line-height:22px;
+	background:#fff;
+	padding:30px;
+	/*display: none;*/
+	position: absolute;
+	top: calc(100% - 55px);
+	left: 23px;
+	z-index: -1;
+}
+.concept div.center button{
+	border:none;
+	background:none;
+	margin-top:20px;
+	outline:none;
+	padding:0;
+}
+.concept div.center button img{
+	width:50px;
+}
 
-h3{
+.bottom{
 	position:absolute;
-	bottom:50px;
-	left:45%;
+	bottom:100px;
+	left:50%;
+	transform:translateX(-50%);
+	font-size:20px;
+	letter-spacing:1px;
+	cursor:pointer;
+}
+.bottom h3{
+	font-size:20px;
+	letter-spacing:1px;
+	transition:all ease 0.3s;
+}
+.bottom .arrow{
+    position: absolute;
+    top:40px;
+	left:50%;
+    width: 30px;
+    height: 30px;
+    background: url(../images/arrow.svg) no-repeat center center;
+    background-size: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: rotate(90deg) translateY(50%);
+	transition:all ease 0.3s;
+}
+
+
+
+#contact{
+	background:#28292b;
+	height:auto;
+	padding:50px 0;
+	text-align:center;
+	font-size:30px;
+	font-weight:700;
+	letter-spacing:3px;
+    line-height: 50px;
+}
+#contact h3{
+	margin-top:20px;
+}
+#contact li{
+    margin: 25px 0;
+    line-height: 22px;
+    letter-spacing:1px;
+}
+#contact li a{
+	color:#fff;
+	text-decoration:none;
+}
+#contact a.button{
+	line-height:20px;
+	margin-top:20px;
+}
+
+#contact li a img{
+	width:42px;
+}
+#contact ul.social{
+	margin-top:20px;
+}
+#contact ul.social li{
+	display:inline-block;
+	margin:0;
+	margin-right:5px;
 }
 
 
 
 
-
-
 footer{
-	position:fixed;
-	bottom:0;
-	left:0;
-	width:100%;
 	background:#000;
-	z-index:-1;
-	height:65px;
+	/*height:65px;*/
 	line-height:65px;
 	color:#fff;
 	font-size:0;
 	text-align:center;
+	position:relative;
+	z-index:2;
 }
 
 footer p{
@@ -521,4 +614,47 @@ form button.button{
 #cookieChoiceInfo a:nth-of-type(2){
 	color:#fff;
 	background:#1007d1;
+}
+
+
+
+
+
+
+/* MOBILE */
+@media screen and (max-width: 800px) {
+	.concept{
+		position:relative;
+		height:100vh;
+	}
+	.concept div.center.strate2,
+	.concept div.center.strate3,
+	.concept div.center.strate4{
+		opacity:1;
+	}
+	.concept:nth-of-type(2){
+		background:url(../images/museum.jpg) no-repeat center;
+		background-size:cover;
+	}
+	.concept:nth-of-type(3){
+		background:url(../images/museum3.jpg) no-repeat center;
+		background-size:cover;
+	}
+	.concept:nth-of-type(4){
+		background:url(../images/museum2.jpg) no-repeat center;
+		background-size:cover;
+	}
+	.concept div.center.strate2, .concept div.center.strate3, .concept div.center.strate4{
+		width: 80%;
+		left: 10%;
+		top:30%;
+	}
+	div.center.strate2 p, div.center.strate3 p, div.center.strate4 p{
+		display:block;
+		z-index:1;
+	}
+	.concept div.center button{
+		z-index:2;
+		position:relative;
+	}
 }

@@ -4,8 +4,7 @@
 <!doctype html>
 <head>
 	<title>OPUS - Digitalisez votre musée</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/style.css">
-    <link rel="stylesheet" media="screen and (max-width: 980px)" href="<?php echo $urlBASE; ?>css/medias.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/museum.css">
 	<link rel="icon" type="image/png" href="<?php echo $urlBASE; ?>images/favicon.png" />
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,7 +48,12 @@
 <body class="museum">
 	<header>
 		<nav>
-			<h1><a href="#presentation" class="home no-mobile"><img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo" title="Logo de l'application Opus" /></a></h1>
+			<h1>
+				<a href="#" class="home no-mobile">
+				<img src="<?php echo $urlBASE; ?>images/logo-blanc.png" alt="Logo Opus" id="logo" title="Logo de l'application Opus" />
+				<img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo" title="Logo de l'application Opus" class="logo2" />
+				</a>
+			</h1>
 
 			<form method="POST">
 				<select class="lang" name="lang">
@@ -63,19 +67,65 @@
 	<section>
 
 		<article id="concept" class="concept">
+			<div id="bg1"></div>
+			<div id="bg2"></div>
+			<div id="bg3"></div>
+			
 			<div class="content">
-
 				<img src="<?php echo $urlBASE; ?>images/joconde.png" alt="mockup opus" title="visuelle télephone opus" class="iPhone"/>
 
-				<div class="center">
+				<div class="center strate1">
 					<h2>Opus</h2>
-					<p>La boutique musée embarquée</p>
+					<h2>La boutique musée embarquée</h2>
 				</div>
-				<h3>Commencez la visite</h3>
+
+				<div class="bottom">
+					<h3>Commencez la visite</h3>
+					<div class="arrow"></div>
+				</div>
 			</div>
 		</article>
 
+		<article class="concept">
+			<div class="center strate2">
+				<h2>La joconde au musée</h2>
+				<button type="button" name="button"><img src="<?php echo $urlBASE; ?>images/more.png" alt="lire plus" title="Obtenir plus d'informations"/></button>
+				<p>L'oeuvre vous plaît ? Aucun problème. Scannez l'oeuvre grâce à votre application Opus et ajoutez là à vos favoris. Vous aurez accès accès à des informations, dans la langue que vous souhaitez, sur le tableau ainsi qu'une boutique embarquée réservée à celui-ci.</p>
+			</div>
+		</article>
+
+		<article class="concept">
+			<div class="center strate3">
+				<h2>La joconde en boutique</h2>
+				<button type="button" name="button"><img src="<?php echo $urlBASE; ?>images/more.png" alt="lire plus" title="Obtenir plus d'informations"/></button>
+				<p>Opus vous propose une sélection de représentations et de produits, que vous pouvez directement payer via votre smartphone, depuis le musée ou même sur la terrasse d'un café, après la visite.</p>
+			</div>
+		</article>
+
+		<article class="concept">
+			<div class="center strate4">
+				<h2>La joconde chez vous</h2>
+				<button type="button" name="button"><img src="<?php echo $urlBASE; ?>images/more.png" alt="lire plus" title="Obtenir plus d'informations"/></button>
+				<p>Le système de livraison vous permet de ne pas vous encombrer. Recevez votre reproduction directement chez vous et contemplez la à votre guise.</p>
+			</div>
+		</article>
+	</section>
 	<footer>
+		<div id="contact">
+			<h2>Vivez l'expérience,<br> rejoignez-nous sur les réseaux sociaux.</h2>
+			<ul class="social">
+				<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus" title="redirection facebook"/></a></li>
+				<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png" alt="lien twitter opus" title="redirection twitter"/></a></li>
+				<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus" title="redirection instagram"/></a></li>
+				<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
+				<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
+				<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li>
+			</ul>
+
+			<h3>Vous êtes professionnel ?</h3>
+			<a href="/pro" class="button">En savoir plus</a>
+
+		</div>
 		<p>Opus - <?php echo COPYRIGHT; ?> © 2017</p>
 		<p><a href=""><?php echo MENTIONS; ?></a></p>
 	</footer>

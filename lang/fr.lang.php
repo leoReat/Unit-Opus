@@ -8,7 +8,7 @@
 	define("PRESENTATION_TEXTE", "<strong>Opus</strong>, l'application qui achemine vos oeuvres d'art préférées jusqu'à chez vous !");
 	define("PRESENTATION_CTA", "Découvrir");
 
-	define("CONCEPT_TEXTE_1", "<strong>Opus</strong> vous permet, au cours d’une visite de musée ou galerie d’art, d’acheter la lithographie d’une oeuvre que vous appréciez, sans passer par la boutique physique.");
+	define("CONCEPT_TEXTE_1", "En vendant des souvenirs via l’application <strong>Opus</strong>, vous proposez une expérience phygitale inédite à vos utilisateurs, et révolutionnez vos espaces de ventes, les rendant intuitifs et simples à utiliser. ");
 	define("PRO_CONCEPT_TEXTE_1", "Opus vous permet de digitaliser vos points de vente, permettant aux visiteurs d’acheter des produits dérivés sans passer par la boutique physique. En un seul geste, Opus reconnaît l’oeuvre devant laquelle se trouve le visiteur et permet une livraison du produit.");
 	define("CONCEPT_TEXTE_2", "En un seul geste, <strong>Opus</strong> reconnaît l’oeuvre devant laquelle vous vous trouvez et la livre directement chez vous.");
 	define("CONCEPT_CTA", "S'inscrire à la newsletter");

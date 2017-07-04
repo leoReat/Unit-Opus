@@ -74,27 +74,30 @@
 
 		<article id="assurance">
 			<div class="content">
-				<div class="box">
+				<div class="box boost">
 					<img src="<?php echo $urlBASE; ?>images/boost.png" alt="Opus booste vos ventes"/>
-					<h2>Capturez vos oeuvres</h2>
-					<p>Vos sélections dans votre salon en 2 clics.</p>
+					<h2>Booster vos ventes</h2>
+					<p>Une expérience phygitale <br />proposée aux visiteurs.</p>
+                    <div class="box see-more"><a href="#concept" title="Découvrir le concept" class="button scroll">En savoir plus</a></div>
 				</div>
-				<div class="box">
+				<div class="box affine">
 					<img src="<?php echo $urlBASE; ?>images/gamme.png" alt=""/>
-					<h2>Une application polyglotte</h2>
-					<p>Une présentation des oeuvres dans votre langue en un flash.</p>
+					<h2>Affiner votre gamme de produit</h2>
+					<p>Proposez une sélection affinée de produits pour chaque oeuvre.</p>
+                    <div class="box see-more"><a href="#concept2" title="Changez de langue simplement" class="button scroll">En savoir plus</a></div>
 				</div>
-				<div class="box">
+				<div class="box gestion">
 					<img src="<?php echo $urlBASE; ?>images/stock.png" alt=""/>
-					<h2>La fin des files d’attente</h2>
-					<p>Des achats depuis votre téléphone sans passer par la boutique.</p>
+					<h2>Gestion du stock juste-à-temps</h2>
+					<p>Des productions au fur et à mesure des commandes.</p>
+                    <div class="box see-more"><a href="#concept3" title="Découvrez notre application" class="button scroll">En savoir plus</a></div>
 				</div>
 
-				<div class="box see-more"><a href="#concept" title="Découvrir le concept" class="button scroll">En savoir plus</a></div>
-				<div class="box see-more"><a href="#concept2" title="Changez de langue simplement" class="button scroll">En savoir plus</a></div>
-				<div class="box see-more"><a href="#concept3" title="Découvrez notre application" class="button scroll">En savoir plus</a></div>
 
-				<div id="thanks">
+
+
+
+				<!-- <div id="thanks">
 					<p class=button>On se retrouve rapidement !</p>
 				</div>
 				<div id="connect" class="box">
@@ -106,7 +109,7 @@
 						<input type="hidden" name="pro" value="<?php echo $pro; ?>">
 						<button type="submit">OK</button>
 					</form>
-				</div>
+				</div> -->
 
 			</div>
 		</article>
@@ -115,7 +118,7 @@
 			<div class="content">
 				<div class="iPhone">
 					<div class="screen"></div>
-					<img src="<?php echo $urlBASE; ?>images/iphone.png" alt="mockup opus" title="visuelle télephone opus"/>
+					<img src="<?php echo $urlBASE; ?>images/joconde_biseau.jpg" alt="mockup opus" title="visuelle télephone opus"/>
 				</div>
 				<div class="center">
 				<?php
@@ -127,11 +130,11 @@
 
 		<article id="concept2" class="concept">
 			<div class="content">
-				<div class="iPhone">
+				<div class="gustave">
 					<div class="screen"></div>
-					<img src="<?php echo $urlBASE; ?>images/iphone.png" alt="mockup opus" title="visuelle télephone opus"/>
+					<img src="<?php echo $urlBASE; ?>images/gustav_biseau.jpg" alt="mockup opus" title="visuelle télephone opus"/>
 				</div>
-				<div class="center">
+				<div class="center2">
 				<?php
 					require("assets/concept2".$pro.".html")
 				?>
@@ -143,7 +146,7 @@
 			<div class="content">
 				<div class="iPhone">
 					<div class="screen"></div>
-					<img src="<?php echo $urlBASE; ?>images/iphone.png" alt="mockup opus" title="visuelle télephone opus"/>
+					<img src="<?php echo $urlBASE; ?>images/madone_biseau.jpg" alt="mockup opus" title="visuelle télephone opus"/>
 				</div>
 				<div class="center">
 				<?php

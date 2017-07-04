@@ -117,17 +117,16 @@ select.lang{
 }
 
 .content{
-	margin:auto;
-	width:80%;
-	max-width:960px;
+	width:100%;
 	color:#fff;
+	height: 100%;
 }
 
 section article{
 	position:relative;
 }
 #presentation{
-	background:url(../images/background.jpg) no-repeat;
+	background:url(../images/background_pro.jpg) no-repeat;
 	background-size:cover;
 }
 
@@ -199,9 +198,18 @@ section article{
 .center{
 	animation:fade ease 2s;
 }
+.center2{
+	animation:fade ease 2s;
+}
 div.center{
-	left: 55%;
-    width: 35%;
+	left: 21%;
+    width: 58%;
+	text-align: center;
+}
+div.center2{
+	left: 21%;
+	width: 58%;
+	text-align: center;
 }
 @keyframes fade{
 	0%{opacity:0;}
@@ -213,24 +221,48 @@ div.center{
 	top:50%;
 	transform:translateY(-50%);
 }
+.center2{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+}
 div.center h2{
 	font-size:45px;
 	font-weight:700;
 	letter-spacing:3px;
-    line-height: 50px;
+	line-height: 50px;
 }
+div.center2 h2{
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 50px;
+}
+
 div.center p{
 	font-size:18px;
 	letter-spacing:1px;
 	margin:30px 0;
 	line-height:25px;
 	font-weight: 300;
+	width: 76%;
+}
+div.center2 p{
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin: 30px 0;
+	line-height: 25px;
+	font-weight: 300;
+	width: 76%;
 }
 #presentation div.center p{
 	margin-bottom:0;
 }
 div.center p strong{
 	font-weight:600;
+}
+div.center2 p strong{
+	font-weight: 600;
 }
 .button, button.button{
 	text-decoration:none;
@@ -247,7 +279,7 @@ div.center p strong{
 }
 
 .concept{
-	background:url(../images/concept1.jpg) no-repeat;
+	background:url(../images/fond_ventes.jpg) no-repeat;
 	background-size:cover;
 	text-align:right;
 }
@@ -257,60 +289,62 @@ div.center p strong{
 }
 .concept .iPhone{
     height: calc(100% - 100px);
-    padding-top:50px;
+    padding-top:120px;
     position:relative;
     display:inline-block;
-    width:auto;
+    width:36%;
+	margin-right: 14%;
+}
+.concept .gustave{
+	height: calc(100% - 100px);
+	padding-top: 120px;
+	position: relative;
+	display: inline-block;
+	width: 36%;
+	margin-left: 14%;
 }
 .concept .iPhone img{
-	height:100%;
+	height:80%;
 	position:relative;
 }
-.concept .iPhone .screen{
-    position: absolute;
-    width: calc(100% - 20px);
-    height: calc(100% - 140px);
-    left: 10px;
-    bottom: 40px;
-    overflow: hidden;
-}
-.concept .iPhone .screen:before{
-	content:"";
-	position:absolute;
-	width:100%;
-	height:100%;
-	background:url(../images/joconde.jpg) no-repeat center center;
-	background-size:cover;
-	left:0;
-	top:0;
-	transition:transform ease 0.5s;
+.concept .gustave img{
+	height: 80%;
+	position: relative;
 }
 .concept .iPhone:hover .screen:before{
 	transform:scale(1.15);
 }
+.concept .gustave:hover . screen:before{
+	transform: scale(1.15);
+}
 .concept div.center{
 	color:#fff;
-	width:55%;
+	width:36%;
 	left:auto;
 	text-align:left;
+	margin-left: 14%;
+}
+.concept div.center2{
+	color: #000000;
+	width: 36%;
+	left: auto;
+	text-align: left;
+	margin-right: 14%;
 }
 .concept div.center a{
 	background:#1007d1;
 	color:#fff;
 }
+.concept div.center2 a{
+	background: #1007d1;
+}
 
 .concept#concept2{
 	background:#fdfcfc;
 }
-.concept#concept2 div.center{
+.concept#concept2 div.center2{
 	color:#373737;
-	left:40%;
-}
-.concept#concept2 .iPhone .screen:before{
-	background-image:url(../images/tableau2.jpg)
-}
-.concept#concept3 .iPhone .screen:before{
-	background-image:url(../images/tableau3.jpg)
+	left:55%;
 }
 .concept#concept2 .content{
 	text-align:left;
@@ -607,12 +641,13 @@ form button.button{
 
 #assurance{
 	font-size:0;
-	padding:90px 0;
-	background:#fff;
 	height:auto;
+	background:url(../images/fond_concept.jpg) no-repeat;
+	background-size:cover;
+	height: 100%;
 }
 #assurance .content div.box{
-	width:calc(100% / 3 - 30px);
+	width:calc(100% / 3);
 	display:inline-block;
 	text-align:center;
 	font-size:19px;
@@ -621,45 +656,51 @@ form button.button{
 	color:#373737;
 	box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.1);
 	box-sizing:border-box;
-	padding:45px;
+	padding:150px 45px 0px 45px;
+	height: 100%;
+	background-color: #ffffff;
+	opacity: 0.8;
+}
+#assurance .content div.boost:hover{
+	background-color: #ffffff;
+	opacity:1;
+}
+#assurance .content div.gestion:hover{
+	background-color: #ffffff;
+	opacity:1;
+}
+#assurance .content div.affine:hover{
+	background-color: #ffffff;
+	opacity:1;
 }
 #assurance .content div img{
-	width:70px;
-}
-#assurance .content div:nth-of-type(2),
-#assurance .content div:nth-of-type(5){
-	margin:0 45px;
+	width:80px;
 }
 #assurance .content div.see-more{
 	box-shadow:none;
 	padding:0;
+	margin-top: 60px;
 }
 
 #assurance .content div h2, #assurance .content div p{
-	text-align:left;
-	margin-top:20px;
+	text-align:center;
+	margin-top:60px;
 }
 #assurance .content div h2{
 	font-weight:600;
 	font-size:17px;
 }
-#assurance .content div h2:after{
-	content:"";
-	display:block;
-	width:30px;
-	height:3px;
-	margin-top:10px;
-	background:#373737;
-}
 #assurance .content div p{
 	font-size:16px;
 	font-weight:500;
+	line-height: 20pt;
 }
 #assurance .content a.button{
 	font-size:15px;
 	background:#1308f9;
 	color:#fff;
 	padding:10px 20px;
+	width: 120px;
 }
 #assurance .content div#connect{
 	width:100%;

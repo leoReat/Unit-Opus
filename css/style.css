@@ -372,19 +372,22 @@ div.center2 p strong{
 
 #contact .content.center{
 	width:80%;
-	max-width:960px;
 	/*left:50%;*/
 	/*transform:translate(-50%, -50%);*/
 	font-size:0;
 	position:static;
 	transform:none;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #contact .content.center .contact-left{
 	display:inline-block;
 	vertical-align:top;
-	/*width:45%;*/
+	width:50%;
 	font-size:15px;
+	left: auto;
+	text-align: left;
 }
 #contact .content.center .contact-left h2{
 	margin-bottom:20px;
@@ -408,6 +411,9 @@ div.center2 p strong{
 	margin:0;
 	margin-right:5px;
 }
+/*#contact .content.center ul.social li:hover{
+	background-image: url("/images/lkd_b.png");
+}*/
 
 #contact .content.center .contact-left ul:not(.social) li img{
     margin-right: 7px;
@@ -505,8 +511,7 @@ form{
 }
 #contact form{
     vertical-align: top;
-    width:45%;
-    margin-left:5%;
+    width:50%;
     margin-top:85px;
     padding:30px;
     padding-right:0;
@@ -550,14 +555,14 @@ form button.button{
 .scroll-top{
     position: absolute;
     bottom: 20px;
-    right: 30px;
+    right: 130px;
     background: none;
     border: none;
     width: 60px;
     height: 60px;
     outline: none;
     cursor:pointer;
-    display:none;
+    display:inline;
 }
 .scroll-top img{
 	width:100%;

@@ -160,36 +160,35 @@
 			<div class="content center">
 				<div class="contact-left">
 					<h2><?php echo CONTACT_TITRE; ?></h2>
-					<!-- <p><?php echo CONTACT_TEXTE; ?></p> -->
-					<!-- <ul>
+					<p><?php echo CONTACT_TEXTE; ?></p>
+                    <ul>
 						<li><img src="<?php echo $urlBASE; ?>images/tel.png" alt="logo telephone" title="pictogramme téléphone"/> 06.70.28.61.80</li>
 						<li><img src="<?php echo $urlBASE; ?>images/map.png" alt="logo telephone" title="pictogramme carte"/> OPUS<br>
 						<span>5 rue Froment, 75011 Paris - FRANCE</span></li>
-						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" title="pictogramme mail"/> <a href="mailto:contact@get-opus.fr">contact@get-opus.fr</a></li>
-					</ul> -->
+						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" title="pictogramme mail"/> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
+					</ul>
 					<ul class="social">
 						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus" title="redirection facebook"/></a></li>
 						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png" alt="lien twitter opus" title="redirection twitter"/></a></li>
 						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus" title="redirection instagram"/></a></li>
-						<!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
-						<!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-						<li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li>
+                        <!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
+                        <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li>
+						<!-- <li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li> -->
 					</ul>
 				</div>
-
-			<!-- 	<form action="#" method="POST">
+			 	<form action="#" method="POST">
 					<input type="text" name="nom" placeholder="Nom">
 					<input type="email" name="mail" placeholder="Adresse mail">
 					<textarea placeholder="Message"></textarea>
 					<button type="submit" class="button">Envoyer</button>
-				</form> -->
-			</div>
-			<button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="retour en haut"/></button>
+				</form>
+                <button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="retour en haut"/></button>
+            </div>
 		</article>
 	</section>
 
 	<footer>
-		<p>Opus - <?php echo COPYRIGHT; ?> © 2017</p>
+		<p><?php echo COPYRIGHT; ?> ©</p>
 		<p><a href=""><?php echo MENTIONS; ?></a></p>
 	</footer>
 

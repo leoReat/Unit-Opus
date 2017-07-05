@@ -13,11 +13,11 @@
 	define("CONCEPT_TEXTE_2", "En un seul geste, <strong>Opus</strong> reconnaît l’oeuvre devant laquelle vous vous trouvez et la livre directement chez vous.");
 	define("CONCEPT_CTA", "S'inscrire à la newsletter");
 
-	define("CONTACT_TITRE", "Invitez vos amis qui vont voyager.");
+	define("CONTACT_TITRE", "Contactez-nous.");
 	define("CONTACT_TEXTE", "N’hésitez pas à nous contacter si vous avez une question à poser, une suggestion à apporter, un partenariat à proposer ou pour tout autre demande.");
 	define("CONTACT_CTA", "Chat en direct");
 
-	define("COPYRIGHT", "Tous droits réservés");
+	define("COPYRIGHT", "UNIT Copyright");
 	define("MENTIONS", "Mentions légales");
 	define("MENTIONS_TITRE", "Le présent site est édité par l'agence Unit :");
 	define("MENTIONS_TEXTE", "Adresse : 5 rue Froment 75011 Paris, France<br/>

@@ -78,19 +78,19 @@
 					<img src="<?php echo $urlBASE; ?>images/boost.png" alt="Opus booste vos ventes"/>
 					<h2>Booster vos ventes</h2>
 					<p>Une expérience phygitale <br />proposée aux visiteurs.</p>
-                    <div class="box see-more"><a href="#concept" title="Découvrir le concept" class="button scroll">En savoir plus</a></div>
+                    <a href="#concept" title="Découvrir le concept" class="button scroll">En savoir plus</a>
 				</div>
 				<div class="box affine">
 					<img src="<?php echo $urlBASE; ?>images/gamme.png" alt=""/>
 					<h2>Affiner votre gamme de produit</h2>
 					<p>Proposez une sélection affinée de produits pour chaque oeuvre.</p>
-                    <div class="box see-more"><a href="#concept2" title="Changez de langue simplement" class="button scroll">En savoir plus</a></div>
+                    <a href="#concept2" title="Changez de langue simplement" class="button scroll">En savoir plus</a>
 				</div>
 				<div class="box gestion">
 					<img src="<?php echo $urlBASE; ?>images/stock.png" alt=""/>
 					<h2>Gestion du stock juste-à-temps</h2>
 					<p>Des productions au fur et à mesure des commandes.</p>
-                    <div class="box see-more"><a href="#concept3" title="Découvrez notre application" class="button scroll">En savoir plus</a></div>
+                    <a href="#concept3" title="Découvrez notre application" class="button scroll">En savoir plus</a>
 				</div>
 
 

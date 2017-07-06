@@ -378,6 +378,7 @@ div.center2 p strong{
 	font-size:0;
 	position:static;
 	transform:none;
+	margin:auto;
 }
 
 #contact .content.center .contact-left{

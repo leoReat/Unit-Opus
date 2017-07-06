@@ -11,7 +11,7 @@ $(document).ready(function(){
             var height = 300 + (100 * strate1);
             var transform = 50 * strate1;
             var padding = 150 - (80 * strate1);
-            $(".concept img.iPhone").css({"height":"calc(100% - "+height+"px)", "transform":"translateX("+transform+"%)", "right":transform+"%", "padding-top":padding});
+            $(".concept img.iPhone").css({"height":"calc(100% - "+height+"px)", "transform":"translate("+transform+"%, -50%)", "right":transform+"%"});
             $(".strate1").show().css("opacity", 1-strate1);
             $("#bg1").css("opacity", 1-strate1);
             $(".concept div.center.strate2").show().css("opacity", strate1);
@@ -20,7 +20,7 @@ $(document).ready(function(){
 
         }
         else{
-            $(".concept img.iPhone").css({"height":"calc(100% - 400px)", "transform":"translateX(50%)", "right":"50%", "padding-top":"70px"})
+            $(".concept img.iPhone").css({"height":"calc(100% - 400px)", "transform":"translate(50%, -85%)", "right":"50%"})
             $(".strate1").fadeOut();
             $("#bg1").css("opacity", 0);
             $("#logo").show().css("opacity", 0);

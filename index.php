@@ -67,10 +67,10 @@
 	<section>
 
 		<article id="concept" class="concept">
-			<div id="bg1"></div>
+			<!-- <div id="bg1"></div>
 			<div id="bg2"></div>
-			<div id="bg3"></div>
-			
+			<div id="bg3"></div> -->
+
 			<div class="content">
 				<img src="<?php echo $urlBASE; ?>images/joconde.png" alt="mockup opus" title="visuelle télephone opus" class="iPhone"/>
 

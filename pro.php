@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="<?php echo $urlBASE; ?>css/medias.css" type="text/css" />
 	<link rel="icon" type="image/png" href="<?php echo $urlBASE; ?>images/favicon.png" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Opus, musée, digital">
@@ -168,11 +169,11 @@
 						<li><img src="<?php echo $urlBASE; ?>images/mail.png" alt="logo telephone" title="pictogramme mail"/> <a href="mailto:unit.iesa@gmail.com">unit.iesa@gmail.com</a></li>
 					</ul>
 					<ul class="social">
-						<li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus" title="redirection facebook"/></a></li>
-						<li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png" alt="lien twitter opus" title="redirection twitter"/></a></li>
-						<li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus" title="redirection instagram"/></a></li>
+						<li><a class="rs" href="https://www.facebook.com/GetOpusApp" target="_BLANK"><i src="<?php echo $urlBASE; ?>" class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a class="rs" href="https://twitter.com/GetOpus" target="_BLANK"><i src="<?php echo $urlBASE; ?>" class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a class="rs" href="https://www.instagram.com/getopusapp/" target="_BLANK"><i src="<?php echo $urlBASE ?>" class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
-                        <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li>
+                        <li><a class="rs" href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><i src="<?php echo $urlBASE?>" class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 						<!-- <li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li> -->
 					</ul>
 				</div>
@@ -182,7 +183,7 @@
 					<textarea placeholder="Message"></textarea>
 					<button type="submit" class="button">Envoyer</button>
 				</form>
-                <button class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="retour en haut"/></button>
+                <button type="bouton" onclick="window.scrollTo(0, 0);" class="scroll-top"><img src="<?php echo $urlBASE; ?>images/scroll-top.png" alt="Retour en haut de page" title="retour en haut"/></button>
             </div>
 		</article>
 	</section>

@@ -173,7 +173,7 @@
 						<li><a class="rs" href="https://twitter.com/GetOpus" target="_BLANK"><i src="<?php echo $urlBASE; ?>" class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						<li><a class="rs" href="https://www.instagram.com/getopusapp/" target="_BLANK"><i src="<?php echo $urlBASE ?>" class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
-                        <li><a class="rs" href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><i src="<?php echo $urlBASE?>" class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a class="rs" href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><i src="<?php echo $urlBASE?>e" class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 						<!-- <li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png" alt="live chat messenger avec Opus" title="discussion opus"/></a></li> -->
 					</ul>
 				</div>

@@ -164,6 +164,27 @@ section article{
     top: 2px;
     left: 5px;
 }
+#presentation div.center a.button img.dec_arrow{
+	margin-left: 14px;
+
+
+}
+#presentation div.center a.button img.dec_arrow:hover {
+	animation-duration: 2s;
+	animation-name: jump;
+	transform-origin: center bottom;
+}
+@keyframes jump{
+	from, 0%, 20%, 50%, 80%, 100% {
+		transform(translateY(0));
+	  }
+		40% {
+		transform(translateY(-30px));
+	  }
+		60% {
+		transform(translateY(-15px));
+	  }
+}
 #hdroit {
 	position: absolute;
 	top: 24px;
@@ -430,7 +451,7 @@ div.center2 p strong{
 	top: 100%;
 	left: 0;
 	content: '';
-	transition: top 0.5s ease;
+	transition: top 0.3s ease;
 	display: block;
 	z-index: auto;
 	background: #1308f9;
@@ -812,3 +833,6 @@ form button.button{
 #assurance .content div#connect button:hover{
 	border-color:#0bdbfa;
 }
+
+
+

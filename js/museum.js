@@ -1,11 +1,12 @@
 (function ($) {
 
     $('#panel1').addClass('focus');
-    $(window).scrollTop(0);
+
 
     var scrollTo = function(id){
         $('.concept.focus').removeClass('focus');
         $('.concept#panel'+id).addClass('focus');
+        if(panel == 7) $('.concept#panel6').addClass('focus');
 
         var offset = $('.concept#panel'+panel).offset().top;
         $(window).scrollTop(offset);
@@ -19,7 +20,7 @@
 
     var panel = 1, prevScroll = 0, stop = 0;
 
-    $("body").on("scroll mousewheel touchmove", function(e) {
+    $(document).on("scroll mousewheel touchmove", function(e) {
         //if ($(window).width() < 800) return;
 
 
@@ -31,9 +32,9 @@
         var st = $(this).scrollTop();
 
         console.log(prevScroll, st)
-        if(st >= prevScroll){
+        if(st > prevScroll){
             console.log("next");
-            nextSlide();
+             nextSlide();
         }
         else{
             console.log("PREV")
@@ -49,6 +50,7 @@
         e.preventDefault();
         e.stopPropagation();
 
+        console.log(">>>", $(this).index() + 1)
         scrollTo($(this).index() + 1);
     });
 
@@ -58,7 +60,8 @@
 
     var nextSlide = function(){
         panel ++;
-        if(panel > 4) panel = 1;
+        console.log(panel)
+        if(panel > 7) panel = 1;
         scrollTo(panel);
 
         stop = 1;

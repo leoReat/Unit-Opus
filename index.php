@@ -72,30 +72,77 @@ require_once("assets/config.php");
        <div class="center">
            <h2>Opus<br>La boutique musée embarquée</h2>
            <h3>Procurez-vous des  souvenirs, tout en préservant les œuvres</h3>
+           <a href="/pro" class="button">Découvrir Opus <img src="<?php echo $urlBASE; ?>images/arrow-blue.svg" alt=""></a>
        </div>
     </article>
 
-    <article class="concept" id="panel2">
-        <h2>La joconde au musée</h2>
-        <p>L'oeuvre vous plaît ? Aucun problème. Scannez l'oeuvre grâce à votre application Opus et ajoutez là à vos
-            favoris. Vous aurez accès accès à des informations, dans la langue que vous souhaitez, sur le tableau ainsi
-            qu'une boutique embarquée réservée à celui-ci.</p>
+    <article class="concept content" id="panel2">
+        <div class="center">
+            <h2>Admirez la Joconde au musée.</h2>
+            <p>Vous flashez sur une oeuvre lors de votre visite au musée ? Pourquoi ne pas la ramener chez vous ?</p>
+        </div>
     </article>
 
-    <article class="concept" id="panel3">
-        <h2>La joconde en boutique</h2>
-        <p>Opus vous propose une sélection de représentations et de produits, que vous pouvez directement payer via
-            votre smartphone, depuis le musée ou même sur la terrasse d'un café, après la visite.</p>
+    <article class="concept content" id="panel3">
+        <div class="center">
+            <h2>Scannez-la grâce à Opus.</h2>
+            <p>À l’aide de votre smartphone, Opus détecte l’oeuvre qui vous a tapé dans l’oeil lorsque vous êtes à proximité de celle-ci.</p>
+        </div>
     </article>
 
-    <article class="concept" id="panel4">
-        <h2>La joconde chez vous</h2>
-        <p>Le système de livraison vous permet de ne pas vous encombrer. Recevez votre reproduction directement chez
-            vous et contemplez la à votre guise.</p>
+    <article class="concept content" id="panel4">
+        <div class="center">
+            <h2>Naviguez dans un catalogue spécifique à l’œuvre.</h2>
+            <p>Une fois l’oeuvre scannée, un catalogue de souvenirs dédié est mis à votre disposition.</p>
+        </div>
+    </article>
+
+    <article class="concept content" id="panel5">
+        <div class="center">
+            <h2>Faites votre sélection en toute tranquillité.</h2>
+            <p>Ajoutez les souvenirs à votre panier et commandez depuis l’application, sans passer par la boutique physique du musée.</p>
+        </div>
+    </article>
+
+    <article class="concept content" id="panel6">
+        <div class="center">
+            <h2>Retrouvez-la chez vous.</h2>
+            <p>En un clin d’oeil vos achats sont livrés chez vous. Fini la foule, les files d’attente et les bras chargés !</p>
+        </div>
+    </article>
+
+    <article class="footer concept" id="panel7">
+        <footer>
+            <div id="contact">
+                <h2>Vivez l'expérience,<br> rejoignez-nous sur les réseaux sociaux.</h2>
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img
+                                    src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus"
+                                    title="redirection facebook"/></a></li>
+                    <li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png"
+                                                                                   alt="lien twitter opus"
+                                                                                   title="redirection twitter"/></a></li>
+                    <li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img
+                                    src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus"
+                                    title="redirection instagram"/></a></li>
+                    <!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
+                    <!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
+                    <li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png"
+                                                                              alt="live chat messenger avec Opus"
+                                                                              title="discussion opus"/></a></li>
+                </ul>
+
+                <h3>Vous êtes professionnel ?</h3>
+                <a href="/pro" class="button">En savoir plus</a>
+
+            </div>
+            <p>Opus - <?php echo COPYRIGHT; ?> © 2017</p>
+            <p><a href=""><?php echo MENTIONS; ?></a></p>
+        </footer>
     </article>
 
     <div class="bottom">
-        <h3><a href='#panel1'>•</a> <a href='#panel2'>•</a> <a href='#panel3'>•</a> <a href='#panel4'>•</a></h3>
+        <h3><a href='#panel1'>•</a> <a href='#panel2'>•</a> <a href='#panel3'>•</a> <a href='#panel4'>•</a> <a href='#panel5'>•</a> <a href='#panel6'>•</a></h3>
         <div class="arrow"></div>
     </div>
 
@@ -103,33 +150,7 @@ require_once("assets/config.php");
     <div class="" id="artwork-detail"></div> -->
 </main>
 
-<footer style=display:none;">
-    <div id="contact">
-        <h2>Vivez l'expérience,<br> rejoignez-nous sur les réseaux sociaux.</h2>
-        <ul class="social">
-            <li><a href="https://www.facebook.com/GetOpusApp" target="_BLANK"><img
-                            src="<?php echo $urlBASE; ?>images/fb.png" alt="lien facebook opus"
-                            title="redirection facebook"/></a></li>
-            <li><a href="https://twitter.com/GetOpus" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/tw.png"
-                                                                           alt="lien twitter opus"
-                                                                           title="redirection twitter"/></a></li>
-            <li><a href="https://www.instagram.com/getopusapp/" target="_BLANK"><img
-                            src="<?php echo $urlBASE; ?>images/insta.png" alt="lien instagram opus"
-                            title="redirection instagram"/></a></li>
-            <!-- <li><a href="" target="_BLANK"><img src="images/yt.png" /></a></li> -->
-            <!-- <li><a href="https://www.linkedin.com/in/opus-app-67347b145/" target="_BLANK"><img src="images/lkd.png" /></a></li> -->
-            <li><a href="http://m.me/GetOpusApp" target="_BLANK"><img src="<?php echo $urlBASE; ?>images/messenger.png"
-                                                                      alt="live chat messenger avec Opus"
-                                                                      title="discussion opus"/></a></li>
-        </ul>
 
-        <h3>Vous êtes professionnel ?</h3>
-        <a href="/pro" class="button">En savoir plus</a>
-
-    </div>
-    <p>Opus - <?php echo COPYRIGHT; ?> © 2017</p>
-    <p><a href=""><?php echo MENTIONS; ?></a></p>
-</footer>
 
 
 <div class="overlay"></div>

@@ -13,7 +13,23 @@ var google = new firebase.auth.GoogleAuthProvider();
 var facebook = new firebase.auth.FacebookAuthProvider();
 
 
+var results = firebase.database().ref('morseArduino/').on("value", function(snapshot) {
+	var exists = (snapshot.val() !== null);
+	console.log(snapshot.val())
+
+	if(snapshot.val() == 1){
+		$("#unlink").hide();
+		$("#link").show();
+	}
+	else{
+		$("#unlink").show();
+		$("#link").hide();
+	}
+});
+
+
 $(".connect").click(function(e){
+	console.log("hey")
 	e.preventDefault();
 	sessionStorage.setItem("loading", 1);
 	var provider = $(this).hasClass("facebook") ? facebook : google;

@@ -50,8 +50,6 @@ require_once("assets/config.php");
             <a href="#" class="home no-mobile">
                 <img src="<?php echo $urlBASE; ?>images/logo-blanc.png" alt="Logo Opus" id="logo"
                      title="Logo de l'application Opus"/>
-                <img src="<?php echo $urlBASE; ?>images/logo.png" alt="Logo Opus" id="logo"
-                     title="Logo de l'application Opus" class="logo2"/>
             </a>
         </h1>
 
@@ -70,9 +68,9 @@ require_once("assets/config.php");
 
     <article class="concept" id="panel1">
        <div class="center">
-           <h2>Opus<br>La boutique musée embarquée</h2>
+           <h2>Opus<br>La boutique digitale pour musée</h2>
            <h3>Procurez-vous des  souvenirs, tout en préservant les œuvres</h3>
-           <a href="/pro" class="button">Découvrir Opus <img src="<?php echo $urlBASE; ?>images/arrow-blue.svg" alt=""></a>
+           <a href="" class="button">Découvrir Opus <img src="<?php echo $urlBASE; ?>images/arrow-blue.svg" alt=""></a>
        </div>
     </article>
 
@@ -141,8 +139,8 @@ require_once("assets/config.php");
         </footer>
     </article>
 
+    <p id="navigation"><a href='#panel1'>•</a> <a href='#panel2'>•</a> <a href='#panel3'>•</a> <a href='#panel4'>•</a> <a href='#panel5'>•</a> <a href='#panel6'>•</a></p>
     <div class="bottom">
-        <h3><a href='#panel1'>•</a> <a href='#panel2'>•</a> <a href='#panel3'>•</a> <a href='#panel4'>•</a> <a href='#panel5'>•</a> <a href='#panel6'>•</a></h3>
         <div class="arrow"></div>
     </div>
 
@@ -175,7 +173,6 @@ require_once("assets/config.php");
         });
 </script>
 
-<!-- <script src="http://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> -->
 <script src="<?php echo $urlBASE; ?>js/museum.js"></script>
 
 </body>

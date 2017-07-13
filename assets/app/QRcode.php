@@ -1,5 +1,7 @@
 <div class="container">
-
-    Bonjour <?php echo $_SESSION['username']; ?>,<br />
-    Veuillez connecter votre téléphone à une borne.
+    <div class="fond_scan">
+        <img src="../../images/scan_phone.png" alt="scan tel" title="scan tel">
+        <p>Connectez votre téléphone aux différentes bornes</p>
+    </div>
 </div>
+<?php require "nav.php" ?>

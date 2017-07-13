@@ -1,3 +1,18 @@
 <div class="container">
-    Mes achats !
+    <div>
+        <img src="" />
+        <h2>Paramètres</h2>
+    </div>
+    <div>
+        <p>Recevoir des paramètres</p>
+        <div>
+            <p>Gérer des modes de paiements</p>
+        </div>
+        <div>
+            <p>Nous contacter</p>
+        </div>
+        <div>
+            <p>Noter Opus</p>
+        </div>
+    </div>
 </div>

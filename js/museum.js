@@ -1,84 +1,58 @@
 (function ($) {
 
-    $('#panel1').addClass('focus');
 
 
     var scrollTo = function(id){
-        $('.concept.focus').removeClass('focus');
+        if(panel > 7) panel = 7;
+
+
+        $('.concept.focus').removeClass('focus focusfooter');
         $('.concept#panel'+id).addClass('focus');
-        if(panel == 7) $('.concept#panel6').addClass('focus');
+        if(panel == 7) $('.concept#panel6').addClass('focusfooter');
 
-        var offset = $('.concept#panel'+panel).offset().top;
-        $(window).scrollTop(offset);
-        prevScroll = offset;
-
-        $(".bottom a").css("opacity", "0.5");
-        $(".bottom a:nth-of-type("+id+")").css("opacity", "1");
+        $("#navigation a").css("opacity", "0.5");
+        $("#navigation a:nth-of-type("+id+")").css("opacity", "1");
         panel = id;
     };
 
 
-    var panel = 1, prevScroll = 0, stop = 0;
+    var panel = 1, prevScroll = 0, stop = 1;
 
-    $(document).on("scroll mousewheel touchmove", function(e) {
-        //if ($(window).width() < 800) return;
+    scrollTo(1);
 
-
-        if(stop === 1) {
-            //e.preventDefault();
-            return;
-        }
-
+    $(document).on("scroll", function(e) {
         var st = $(this).scrollTop();
 
-        console.log(prevScroll, st)
-        if(st > prevScroll){
-            console.log("next");
-             nextSlide();
-        }
-        else{
-            console.log("PREV")
-            prevSlide();
-        }
+        var id = Math.ceil(st / $("#panel1").height()) + 1;
+
+        if ($(window).width() < 800) id = Math.ceil(st / $(window).height()) + 1;
+
+        scrollTo(id);
+
+        if(id > 1) $(".bottom .arrow").fadeIn();
+        else $(".bottom .arrow").fadeOut();
     });
 
-    $(".bottom a:nth-of-type("+panel+")").css("opacity", "1");
+    $("#navigation a:nth-of-type("+panel+")").css("opacity", "1");
 
-
-
-    $(".bottom a").click(function(e){
+    $("#navigation a").click(function(e){
         e.preventDefault();
         e.stopPropagation();
 
-        console.log(">>>", $(this).index() + 1)
-        scrollTo($(this).index() + 1);
+        var offset = $('.concept#panel'+($(this).index() + 1)).offset().top;
+        $(window).scrollTop(offset);
     });
 
-    $(".bottom .arrow").click(function(){
-        nextSlide();
-    });
+    $(".bottom .arrow, #panel1 .button").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
 
-    var nextSlide = function(){
         panel ++;
-        console.log(panel)
         if(panel > 7) panel = 1;
-        scrollTo(panel);
 
-        stop = 1;
-        setTimeout(function(){
-            stop = 0;
-        }, 1000);
-    }
+        var offset = $('.concept#panel'+panel).offset().top;
+        $(window).scrollTop(offset);
+    });
 
-    var prevSlide = function(){
-        if(panel > 1) panel --;
-        console.log(panel);
-        scrollTo(panel);
-
-        stop = 1;
-        setTimeout(function(){
-            stop = 0;
-        }, 1000);
-    }
 
 })(jQuery)

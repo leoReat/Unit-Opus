@@ -2,10 +2,10 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $urlBASE; ?>css/app.css">
 </head>
 <nav class="bottom">
-    <ul>
-        <li class="active"><a href="#"><img src="../../images/scan.png" style="width: 26%"></a></li>
-        <li><a href="#"><img src="../../images/catalogue.png" style="width: 35%"></a></li>
-        <li><a href="#"><img src="../../images/user.png" style="width: 30%"></a></li>
+    <ul class="actif-<?php if(isset($idMenu)) echo $idMenu;?>">
+        <li><a href="#">Borne</a></li>
+        <li><a href="#">Achats</a></li>
+        <li><a href="#">Profil</a></li>
     </ul>
 </nav>
 <script type="text/javascript">
@@ -17,14 +17,30 @@
         $("nav ul").addClass("actif-"+menuActif);
 
          var page = "QRcode";
-
         if(menuActif == 2) page = "achats";
         if(menuActif == 3) page = "profil";
 
         $(".container").hide();
         $.get( "assets/app/"+page+".php", function( data ) {
-            $("body").prepend(data);
+            $("body .container").replaceWith(data);
             $(".loader").fadeOut(500);
+
+            if(menuActif == 1){
+                var results = firebase.database().ref('morseArduino/').once("value", function(snapshot) {
+                   var exists = (snapshot.val() !== null);
+                   console.log(snapshot.val())
+
+                   if(snapshot.val() == 1){
+                       $("#unlink").hide();
+                       $("#link").show();
+                   }
+                   else{
+                       $("#unlink").show();
+                       $("#link").hide();
+                   }
+                });
+            }
+
         });
     });
 </script>

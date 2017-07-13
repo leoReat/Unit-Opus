@@ -32,9 +32,51 @@ html, body{
 	padding:3.5vh;
 	position:relative;
 	z-index:1;
-	max-height: calc(100% - 100px);
+	max-height: calc(100% - 88px);
 	overflow: auto;
 }
+.app .container{
+	background: #fff;
+    box-sizing: border-box;
+	box-shadow:0 0 20px rgba(0, 0, 0, 0.2);
+	height: calc(100% - 64px - 88px);
+}
+.app .container p{
+    font-weight: 700;
+    letter-spacing: 1px;
+	line-height: 24px;
+}
+.app .container a{
+	background: #56f256;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 50px;
+	border-radius: 5px;
+	margin-top: 20px;
+	letter-spacing: 1px;
+}
+
+#unlink{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 7vh);
+}
+
+#qrcode{
+	display:block;
+    height: 30vh;
+	margin: 30px auto;
+}
+
+#link #qrcode{
+	width:70%;
+}
+
+
+
 .home #logo{
 	width:100px;
 	margin-top:5vh;
@@ -218,7 +260,7 @@ nav.bottom ul li a{
 	display:inline-block;
 	width:100%;
 	background:#fff;
-	color:blue;
+	color:#292929;
 	padding:20px 0;
 	margin-bottom:0;
 	text-align:center;
@@ -227,7 +269,7 @@ nav.bottom ul:before{
 	content:"";
 	position:absolute;
 	height:4px;
-	background:blue;
+	background:#292929;
 	top:0;
 	left:0;
 	width:calc(100% / 3);
@@ -378,39 +420,25 @@ input.button::-ms-input-placeholder { /* Microsoft Edge */
     100% { transform: rotate(360deg); }
 }
 
-header{
-	position: relative;
-	top: 0;
-	background: none;
+.app header{
+	top:0;
+	bottom:auto;
+	height:auto;
+	background:none;
+	box-shadow:none;
+	font-size:0;
+	position:relative;
 }
-
-header nav{
-	margin: auto;
-	width: 80%;
-	height: 120px;
-	background: none;
-	padding: 0;
+.home #logo{
+	width:50px;
+    margin:20px;
 }
-.container div.fond_scan{
-	width: 90%;
-	height: 440px;
-	background: white;
-	margin-top: 10px;
-	margin-left: 5%;
+.app header h1{
+	display:inline-block;
 }
-
-.container .fond_scan img{
-	width: 30%;
-	margin-top: 40px;
-}
-
-.container .fond_scan p{
-	font-weight: bold;
-	line-height: 32px;
-	font-size: 18px;
-	padding-top: 24px;
-}
-
-div.container{
-	padding: 0;
+.app header form{
+	display: inline-block;
+	width: calc(100% - 90px);
+	vertical-align: top;
+	text-align:right;
 }

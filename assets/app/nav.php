@@ -1,43 +1,60 @@
 <nav class="bottom">
     <ul class="actif-<?php if(isset($idMenu)) echo $idMenu;?>">
-        <li><a href="#">Borne</a></li>
-        <li><a href="#">Achats</a></li>
-        <li><a href="#">Profil</a></li>
+        <li><a href="#"><img src="<?php echo $urlBASE; ?>images/app/scan.png" title="Scanner une oeuvre" /></a></li>
+        <li><a href="#"><img src="<?php echo $urlBASE; ?>images/app/list.png" title="Voir la liste des produits" /></a></li>
+        <li><a href="#"><img src="<?php echo $urlBASE; ?>images/app/user.png" title="Mes paramètres" /></a></li>
     </ul>
 </nav>
 <script type="text/javascript">
-    $("nav ul li a").click(function(e){
-        e.preventDefault();
-        $(".loader").show();
-        var menuActif = $(this).parent().index() + 1;
+    function changePage(menuActif){
+        $(".apploader").show();
         $("nav ul").removeClass();
-        $("nav ul").addClass("actif-"+menuActif);
+        var followMenu = menuActif;
+        if(menuActif == 4 || menuActif == 5) followMenu = 2;
+        $("nav ul").addClass("actif-"+followMenu);
 
-         var page = "QRcode";
-        if(menuActif == 2) page = "achats";
-        if(menuActif == 3) page = "profil";
+        var url = "app.php"
+        if(followMenu == 2) url = "?page=achats";
+        if(followMenu == 3) url = "?page=profil";
 
-        $(".container").hide();
-        $.get( "assets/app/"+page+".php", function( data ) {
-            $("body .container").replaceWith(data);
-            $(".loader").fadeOut(500);
+        console.log(followMenu, url)
 
-            if(menuActif == 1){
-                var results = firebase.database().ref('morseArduino/').once("value", function(snapshot) {
-                   var exists = (snapshot.val() !== null);
-                   console.log(snapshot.val())
+        var page = "QRcode";
+        if(menuActif == 2) page = "achats.php";
+        if(menuActif == 3) page = "profil.php";
+        if(menuActif == 4) page = "panier.php";
+        if(menuActif == 5) page = "achats.php?id=1";
 
-                   if(snapshot.val() == 1){
-                       $("#unlink").hide();
-                       $("#link").show();
-                   }
-                   else{
-                       $("#unlink").show();
-                       $("#link").hide();
-                   }
-                });
-            }
+        if(menuActif == 1){
+            $.get( "assets/app/header.php",
+            function( data ) {
+                $("header").replaceWith(data);
+            });
+        }
+        else{
+            $.post( "assets/app/header-title.php", { title: page},
+            function( data ) {
+                $("header").replaceWith(data);
+            });
+        }
+
+        $.get( "assets/app/"+page, function( data ) {
+            console.log(data)
+            $("body .container").html(data);
+
+            if(menuActif == 2 || menuActif == 5) launchProductList();
+            else if(menuActif == 4) launchCheckout();
+            // else if(menuActif == 4) launchOpus();
+            else $(".apploader").fadeOut(800);
+
+            $(".app header.title h1 a").attr("href", url)
 
         });
+    }
+    $("nav ul li a").click(function(e){
+        e.preventDefault();
+        var menuActif = $(this).parent().index() + 1;
+
+        changePage(menuActif);
     });
 </script>
